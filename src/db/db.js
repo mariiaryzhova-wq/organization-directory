@@ -1,5 +1,5 @@
-const mysql = require('mysql2/promise');
-require('dotenv').config();
+// const mysql = require('mysql2/promise');
+// require('dotenv').config();
 
 // Створення пулу з'єднань для роботи з базою даних MySQL
 const pool = mysql.createPool({
@@ -13,4 +13,4 @@ const pool = mysql.createPool({
     queueLimit: 0
 });
 
-module.exports = pool;
+// module.exports = pool;
