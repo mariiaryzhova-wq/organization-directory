@@ -28,6 +28,7 @@ DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=secret
 DB_NAME=catalog_db
+DB_PORT=3306
 
 4. Запустіть сервер:
 node index.js
