@@ -1,5 +1,5 @@
-import {prisma} from '../db/prisma.js';
-import {OrganizationStatus} from '../../prisma/schema.prisma';
+import { prisma } from '../db/prisma.js';
+import { OrganizationStatus } from '../db/definitions.js';
 
 // Запити до таблиці ORGANIZATIONS
 export async function createOrganization(newOrganization) {
@@ -23,7 +23,7 @@ export async function findAllApprovedOrganizations(){
     try {
         return await prisma.organization.findMany({
             orderBy: {
-                created_at: 'desc',
+                createdAt: 'desc',
             },
             where: {
                 status: OrganizationStatus.approved,
@@ -43,7 +43,7 @@ export async function findOrganizationById(orgId) {
     try {
         return await prisma.organization.findUnique({
             where: {
-                org_id: Number(orgId),
+                id: Number(orgId),
             },
         });
     } catch (error) {
@@ -52,41 +52,25 @@ export async function findOrganizationById(orgId) {
     }
 }
 
-export async function approveOrganization(orgId) {
-    try {
-        return await prisma.organization.update({
-            where: {
-                org_id: Number(orgId),
-            },
-            data: {
-                status: OrganizationStatus.approved,
-                approved_at: new Date(),
-                rejection_reason: null,
-            },
-        });
-    } catch (error) {
-        console.error('Database Error:', error);
-        throw new Error(`Failed to approve organization: ${orgId}`);
-    }
-}
 
-export async function rejectOrganization(
+export async function setOrganizationStatus(
     orgId,
+    status,
     rejectionReason
 ) {
     try {
         return await prisma.organization.update({
             where: {
-                org_id: Number(orgId),
+                id: Number(orgId),
             },
 
             data: {
-                status: OrganizationStatus.rejected,
-                rejection_reason: rejectionReason,
+                status: status,
+                rejectionReason: rejectionReason,
             },
         });
     } catch (error) {
-       console.error('Database Error:', error);
-       throw new Error(`Failed to reject organization: ${orgId}`);
+        console.error('Database Error:', error);
+        throw new Error(`Failed to set organization status: ${orgId}`);
     }
 }

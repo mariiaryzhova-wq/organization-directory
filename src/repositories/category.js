@@ -1,5 +1,5 @@
-import {prisma} from '../db/prisma.js';
-import {OrganizationStatus} from '../../prisma/schema.prisma';
+import { prisma } from '../db/prisma.js';
+import { OrganizationStatus } from '../db/definitions.js';
 
 // Запити до таблиці CATEGORIES та ORGANIZATION_CATEGORIES
 export async function findAllCategories() {
@@ -23,7 +23,7 @@ export async function getApprovedOrganizationsByCategory(categoryId) {
 
                 categories: {
                     some: {
-                        category_id: Number(categoryId),
+                        id: Number(categoryId),
                     },
                 },
             },
