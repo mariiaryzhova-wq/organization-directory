@@ -1,0 +1,58 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+enum OrganizationStatus {
+  pending
+  approved
+  rejected
+  archived
+}
+
+model Organization {
+  id          Int                @id @default(autoincrement())
+  name        String
+  description String?            @db.Text
+  websiteUrl  String?            @map("website_url")
+  status      OrganizationStatus @default(pending)
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  approvedAt      DateTime? @map("approved_at")
+  rejectionReason String?   @db.Text @map("rejection_reason")
+
+  categories OrganizationCategory[]
+
+  @@map("organizations")
+}
+
+model Category {
+  id   Int    @id @default(autoincrement())
+  name String @unique
+
+  organizations OrganizationCategory[]
+
+  @@map("categories")
+}
+
+model OrganizationCategory {
+  organizationId Int @map("organization_id")
+  categoryId     Int @map("category_id")
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  category     Category     @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@id([organizationId, categoryId])
+  @@map("organization_categories")
+}
