@@ -1,24 +1,40 @@
-const pool = require('../db/db');
+import {prisma} from '../db/prisma.js';
+import {OrganizationStatus} from '../../prisma/schema.prisma';
 
-// TODO: SQL запити до таблиці CATEGORIES та ORGANIZATION_CATEGORIES
+// Запити до таблиці CATEGORIES та ORGANIZATION_CATEGORIES
 export async function findAllCategories() {
-    const [rows] = await pool.query(`
-        SELECT *
-        FROM categories
-        ORDER BY name
-    `);
-    return rows;
+    try {
+        return await prisma.category.findMany({
+            orderBy: {
+                name: 'asc',
+            },
+        });
+    } catch (error) {
+        console.error('Database Error:', error);
+        throw new Error('Failed to fetch all categories');
+    }
 }
 
 export async function getApprovedOrganizationsByCategory(categoryId) {
-    const [rows] = await pool.query(`
-        SELECT *
-        FROM organizations o
-         INNER JOIN organization_categories oc
-            ON oc.org_id = o.org_id
-        WHERE category_id = ?
-          AND o.status = 'approved'
-        ORDER BY name
-    `, [categoryId]);
-    return rows;
+    try {
+        return await prisma.organization.findMany({
+            where: {
+                status: OrganizationStatus.approved,
+
+                categories: {
+                    some: {
+                        category_id: Number(categoryId),
+                    },
+                },
+            },
+
+            orderBy: {
+                name: 'asc',
+            },
+        });
+
+    } catch (error) {
+        console.error('Database Error:', error);
+        throw new Error('Failed to fetch approved organizations by category');
+    }
 }
