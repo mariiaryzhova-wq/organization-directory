@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const errorHandler = require('./src/middleware/errorHandler');
+const moderationRoutes = require('./src/routes/moderationRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -14,6 +15,7 @@ app.use(express.urlencoded({ extended: true })); // Для парсингу appl
 // Підключення роутів
 app.use('/api/organizations', require('./src/routes/organizations'));
 app.use('/api/categories', require('./src/routes/categories'));
+app.use('/api/moderation', moderationRoutes);
 
 app.get('/', (req, res) => {
     res.json({ message: "Catalog API is running" });
