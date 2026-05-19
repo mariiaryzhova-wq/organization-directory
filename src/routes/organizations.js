@@ -31,16 +31,12 @@ router.post('/', asyncHandler(organizationsController.create));
 // POST /api/organizations/import
 // Завантаження CSV-файлу з даними організацій
 // Клієнт надсилає файл через multipart/form-data з полем "file"
-// Контролер прийме файл, передасть його в csvParser,
-// провалідує кожен рядок і створить заявки зі статусом pending
 router.post('/import', asyncHandler(organizationsController.importCSV));
 
 //Модерація організацій
 // PUT /api/organizations/:id/status
 // Змінити статус організації тобто можна схвалити, відхилити або архівувати заявку на додавання організації
 // ID організації, статус якої змінюємо передається в URL як :id, а новий статус в тілі запиту.
-// У тілі запиту rea.body має бути JSON з новим статусом і, якщо статус "rejected", 
-// то також з полем rejection_reason з поясненням причини відхилення
 router.put('/:id/status', asyncHandler(organizationsController.updateStatus));
 
 // Експортуємо роутер, щоб його можна було підключити в index.js
