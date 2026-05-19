@@ -1,7 +1,8 @@
 // Валідація форми створення організації
-const { body } = require("express-validator");
+import { body } from "express-validator";
 
-exports.createOrganizationValidation = [
+export const createOrganizationValidation = [
+  // Перевірка назви організації
   body("name")
     .trim()
     .notEmpty()
@@ -9,12 +10,14 @@ exports.createOrganizationValidation = [
     .isLength({ min: 2, max: 255 })
     .withMessage("Name must be between 2 and 255 characters"),
 
+  // Перевірка опису
   body("description")
     .optional()
     .isLength({ max: 1000 })
     .withMessage("Description must not exceed 1000 characters"),
 
-  body("website_url")
+  // Перевірка URL сайту
+  body("websiteUrl")
     .optional({ nullable: true, checkFalsy: true })
     .isURL({
       protocols: ["https"],
@@ -22,14 +25,16 @@ exports.createOrganizationValidation = [
     })
     .withMessage("Website URL must be a valid HTTPS URL"),
 
-  body("category_ids")
+  // Перевірка масиву категорій
+  body("categoryIds")
     .notEmpty()
     .withMessage("Category IDs are required")
     .isArray({ min: 1, max: 5 })
-    .withMessage("Category IDs must be an array with 1 to 5 items")
-    .bail(), //зупинка перевірки далі, якщо вже є помилка
+    .withMessage("Category IDs must contain from 1 to 5 items")
+    .bail(),
 
-  body("category_ids.*")
+  // Перевірка кожного ID категорії
+  body("categoryIds.*")
     .isInt({ min: 1 })
     .withMessage("Each category ID must be a positive integer"),
 ];
