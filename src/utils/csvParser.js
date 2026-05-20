@@ -1,52 +1,93 @@
 import fs from "fs";
 import csv from "csv-parser";
-import { MAX_ROWS, REQUIRED_COLUMNS } from "../constants/constantsCSVParser.js";
-import { validateFile } from "../validators/csv/validateCSVFile.js";
-import { validateRow } from "../validators/csv/validateRow.js";
+import iconv from "iconv-lite";
 
+import { MAX_ROWS } from "../constants/constantsCSVParser.js";
+
+import { validateFile } from "../validators/csv/validateCSVFile.js";
+import { validateHeaders } from "../validators/csv/validateCSVHeaders.js";
+import { validateRow } from "../validators/csv/validateCSVRow.js";
+
+// Головна функція парсингу CSV
+// Приймає шлях до файлу
 export const parseCSV = (filePath) => {
+  // Promise потрібен, бо стріми працюють асинхронно
   return new Promise((resolve, reject) => {
+    // Масив валідних рядків
     const results = [];
+
+    // Масив помилок парсингу/валідації
     const errors = [];
+
+    // Лічильник рядків CSV
     let rowCount = 0;
 
+    // Прапорець перевірки headers
+    // Щоб headers валідовувались тільки 1 раз
+    let headersChecked = false;
+
+    // 1. Перевірка файлу ДО запуску стріму
     try {
       validateFile(filePath);
     } catch (err) {
       return reject(err);
     }
-    // Створення потоку читання CSV файлу у UTF-8 (streaming обробка без завантаження всього файлу в пам'ять)
-    fs.createReadStream(filePath, { encoding: "utf8" })
-      // Передача потоку в csv parser
+
+    // 2. Створення stream читання файлу
+    fs.createReadStream(filePath)
+
+      // 3. Декодування UTF-8
+      .pipe(iconv.decodeStream("utf-8"))
+
+      // 4. Передача потоку в csv-parser
       .pipe(csv())
-      // Перевірка заголовків CSV (чи містить всі обов'язкові колонки)
-      .on("headers", (headers) => {
-        // Видалення зайвих пробілів у назвах колонок
-        const normalized = headers.map((h) => h.trim());
-        // Перевірка наявності обов'язкових колонок
-        for (const col of REQUIRED_COLUMNS) {
-          if (!normalized.includes(col)) {
-            return reject(new Error(`Missing column: ${col}`));
-          }
-        }
-      })
-      // поки є новий рядок CSV, виконується цю функцію(конвеєр)
+
+      // 5. Обробка кожного рядка CSV
       .on("data", (row) => {
+        // 6. Headers перевіряємо лише 1 раз
+        if (!headersChecked) {
+          const headers = Object.keys(row).map((h) =>
+            h.replace(/^\uFEFF/, "").trim(),
+          );
+
+          console.log("DETECTED HEADERS:", headers);
+
+          try {
+            validateHeaders(headers);
+          } catch (err) {
+            return reject(err);
+          }
+
+          // 🔥 ВАЖЛИВО: ставимо після успішної перевірки
+          headersChecked = true;
+        }
+
+        // 7. Збільшуємо лічильник рядків
         rowCount++;
-        // Обмеження кількості рядків для імпорту (захист від великих файлів)
-        if (rowCount > MAX_ROWS) return;
-        // Валідація та нормалізація рядка (перевірка дубліката, пустих значень тощо)
+
+        // 8. Захист від дуже великих CSV
+        if (rowCount > MAX_ROWS) {
+          return;
+        }
+
+        // 9. Валідація та нормалізація рядка
         const validRow = validateRow(row, rowCount, results, errors);
 
+        // 10. Якщо рядок валідний — додаємо у results
         if (validRow) {
           results.push(validRow);
         }
       })
-      // Завершення обробки CSV
+
+      // 11. Завершення stream parsing
       .on("end", () => {
-        resolve({ data: results, errors });
+        resolve({
+          data: results,
+          errors,
+        });
       })
-      // Обробка помилок читання файлу
+
+      // 12. Глобальні помилки stream
       .on("error", reject);
   });
 };
