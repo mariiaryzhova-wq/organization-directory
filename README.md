@@ -22,12 +22,13 @@ ORM / Query Builder: mysql2 (використовується пул з'єдна
    npm install
 
 3. Налаштуйте змінні середовища:
-   Переконайтеся, що в корені проєкту є файл .env із наступним вмістом (замініть дані на свої):
-   PORT=3000
-   DB_HOST=localhost
-   DB_USER=root
-   DB_PASSWORD=secret
-   DB_NAME=catalog_db
+Переконайтеся, що в корені проєкту є файл .env із наступним вмістом (замініть дані на свої):
+PORT=3000
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=secret
+DB_NAME=catalog_db
+DB_PORT=3306
 
 4. Запустіть сервер:
    node index.js
