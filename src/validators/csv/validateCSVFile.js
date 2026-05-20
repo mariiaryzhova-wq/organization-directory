@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { MAX_FILE_SIZE } from "../../constants/constantsCSVParser";
+import { MAX_FILE_SIZE } from "../../constants/constantsCSVParser.js";
 
 export const validateFile = (filePath) => {
   // Перевірка існування файлу
