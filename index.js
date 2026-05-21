@@ -24,7 +24,16 @@ app.get('/', (req, res) => {
 });
 
 // Middleware для обробки помилок
+// 404 — роут не знайдено
+app.use((req, res, next) => {
+    res.status(404).json({
+        errors: [{ field: 'url', message: `Route ${req.method} ${req.originalUrl} not found` }]
+    });
+});
+
+// Глобальний обробник серверних помилок (500)
 app.use(errorHandler);
+
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

@@ -5,11 +5,9 @@ import {
 	findPendingListOfOrganizations,
 	findOrganizationById,
 	setOrganizationStatus,
-} from '../db/organizations.js'
+} from '../repositories/organization.js'
 import { OrganizationStatus } from '../db/definitions.js'
 import { parseCSV } from '../utils/csvParser.js'
-
-<<<<<<< HEAD
 // GET /api/organizations
 export const getAll = async (req, res) => {
 	const organizations = await findAllApprovedOrganizations()
@@ -26,12 +24,16 @@ export const getPending = async (req, res) => {
 export const getById = async (req, res) => {
 	const id = parseInt(req.params.id, 10)
 	if (isNaN(id)) {
-		return res.status(400).json({ message: 'Invalid organization ID' })
+		return res.status(400).json({
+			errors: [{ field: 'id', message: 'Invalid organization ID' }]
+		})
 	}
 
 	const org = await findOrganizationById(id)
 	if (!org) {
-		return res.status(404).json({ message: 'Organization not found' })
+		return res.status(404).json({
+			errors: [{ field: 'id', message: 'Organization not found' }]
+		})
 	}
 
 	res.json(org)
@@ -42,9 +44,9 @@ export const create = async (req, res) => {
 	const { name, description, websiteUrl, categoryIds } = req.body
 
 	if (!Array.isArray(categoryIds) || categoryIds.length === 0) {
-		return res
-			.status(400)
-			.json({ message: 'categoryIds must be a non-empty array' })
+		return res.status(400).json({
+			errors: [{ field: 'categoryIds', message: 'categoryIds must be a non-empty array' }]
+		})
 	}
 
 	const org = await createOrganization({ name, description, websiteUrl })
@@ -62,21 +64,25 @@ export const create = async (req, res) => {
 export const updateStatus = async (req, res) => {
 	const id = parseInt(req.params.id, 10)
 	if (isNaN(id)) {
-		return res.status(400).json({ message: 'Invalid organization ID' })
+		return res.status(400).json({
+			errors: [{ field: 'id', message: 'Invalid organization ID' }]
+		})
 	}
 
 	const { status, rejectionReason } = req.body
 
 	const validStatuses = Object.values(OrganizationStatus)
 	if (!validStatuses.includes(status)) {
-		return res
-			.status(400)
-			.json({ message: `Invalid status. Allowed: ${validStatuses.join(', ')}` })
+		return res.status(400).json({
+			errors: [{ field: 'status', message: `Invalid status. Allowed: ${validStatuses.join(', ')}` }]
+		})
 	}
 
 	const org = await findOrganizationById(id)
 	if (!org) {
-		return res.status(404).json({ message: 'Organization not found' })
+		return res.status(404).json({
+			errors: [{ field: 'id', message: 'Organization not found' }]
+		})
 	}
 
 	const updated = await setOrganizationStatus(
@@ -90,15 +96,20 @@ export const updateStatus = async (req, res) => {
 // POST /api/organizations/import
 export const importCSV = async (req, res) => {
 	if (!req.file) {
-		return res
-			.status(400)
-			.json({ errors: [{ field: 'file', message: 'CSV file is required' }] })
+		return res.status(400).json({
+			errors: [{ field: 'file', message: 'CSV file is required' }]
+		})
 	}
 
 	const { rows, errors: parseErrors } = await parseCSV(req.file.buffer)
 
 	if (!rows.length && parseErrors.length) {
-		return res.status(400).json({ errors: parseErrors })
+		return res.status(400).json({
+			errors: parseErrors.map(e => ({
+				field: e.field || `row_${e.row}`,
+				message: e.error || e.message
+			}))
+		})
 	}
 
 	const errors = [...parseErrors]
@@ -131,8 +142,3 @@ export const importCSV = async (req, res) => {
 
 	res.status(207).json({ created: created.length, errors })
 }
-=======
-export default {
-    // Експорт функцій контролера
-};
->>>>>>> origin/main
