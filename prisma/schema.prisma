@@ -4,7 +4,7 @@
 // Get a free hosted Postgres database in seconds: `npx create-db`
 
 generator client {
-  provider = "prisma-client"
+  provider = "prisma-client-js"
   output   = "../generated/prisma"
 }
 
@@ -30,7 +30,7 @@ model Organization {
   updatedAt DateTime @updatedAt @map("updated_at")
 
   approvedAt      DateTime? @map("approved_at")
-  rejectionReason String?   @db.Text @map("rejection_reason")
+  rejectionReason String?   @map("rejection_reason") @db.Text
 
   categories OrganizationCategory[]
 
