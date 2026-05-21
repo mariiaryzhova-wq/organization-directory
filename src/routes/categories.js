@@ -3,7 +3,6 @@ import { param } from 'express-validator';
 import * as categoriesController from '../controllers/categories.js';
 import validate from '../middleware/validate.js';
 import asyncHandler from '../middleware/asyncHandler.js';
-
 const router = express.Router();
 
 router.get('/', asyncHandler(categoriesController.getAll));
