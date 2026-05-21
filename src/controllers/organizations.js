@@ -1,91 +1,89 @@
-import { prisma } from '../utils/db.js'
+import {
+	createOrganization,
+	AssignCategoryToOrganization,
+	findAllApprovedOrganizations,
+	findPendingListOfOrganizations,
+	findOrganizationById,
+	setOrganizationStatus,
+} from '../db/organizations.js'
+import { OrganizationStatus } from '../db/definitions.js'
 import { parseCSV } from '../utils/csvParser.js'
 
-// GET /api/organizations?category_id=&status=
+// GET /api/organizations
 export const getAll = async (req, res) => {
-	const { category_id, status } = req.query
+	const organizations = await findAllApprovedOrganizations()
+	res.json(organizations)
+}
 
-	const statusFilter = status ?? 'approved'
-
-	const where = {
-		status: statusFilter,
-		...(category_id && {
-			categories: {
-				some: { category_id: Number(category_id) },
-			},
-		}),
-	}
-
-	const organizations = await prisma.organization.findMany({
-		where,
-		select: {
-			org_id: true,
-			name: true,
-			description: true,
-			website_url: true,
-			status: true,
-			created_at: true,
-			categories: {
-				select: {
-					category: { select: { category_id: true, name: true } },
-				},
-			},
-		},
-		orderBy: { created_at: 'desc' },
-	})
-
-	res.json(organizations.map(normalizeOrg))
+// GET /api/organizations/pending
+export const getPending = async (req, res) => {
+	const organizations = await findPendingListOfOrganizations()
+	res.json(organizations)
 }
 
 // GET /api/organizations/:id
 export const getById = async (req, res) => {
-	const org = await prisma.organization.findUnique({
-		where: { org_id: Number(req.params.id) },
-		include: {
-			categories: {
-				select: {
-					category: { select: { category_id: true, name: true } },
-				},
-			},
-		},
-	})
+	const id = parseInt(req.params.id, 10)
+	if (isNaN(id)) {
+		return res.status(400).json({ message: 'Invalid organization ID' })
+	}
 
+	const org = await findOrganizationById(id)
 	if (!org) {
 		return res.status(404).json({ message: 'Organization not found' })
 	}
 
-	res.json(normalizeOrg(org))
+	res.json(org)
 }
 
 // POST /api/organizations
 export const create = async (req, res) => {
-	const { name, description, website_url, category_ids } = req.body
+	const { name, description, websiteUrl, categoryIds } = req.body
 
-	const existing = await prisma.organization.findFirst({ where: { name } })
-	if (existing) {
+	if (!Array.isArray(categoryIds) || categoryIds.length === 0) {
 		return res
-			.status(409)
-			.json({ message: 'Організація з таким іменем вже існує' })
+			.status(400)
+			.json({ message: 'categoryIds must be a non-empty array' })
 	}
 
-	const org = await prisma.organization.create({
-		data: {
-			name,
-			description: description ?? null,
-			website_url: website_url ?? null,
-			status: 'pending',
-			categories: {
-				create: category_ids.map(id => ({ category_id: id })),
-			},
-		},
-		include: {
-			categories: {
-				select: { category: { select: { category_id: true, name: true } } },
-			},
-		},
-	})
+	const org = await createOrganization({ name, description, websiteUrl })
 
-	res.status(201).json(normalizeOrg(org))
+	await Promise.all(
+		categoryIds.map(categoryId =>
+			AssignCategoryToOrganization(org.id, categoryId),
+		),
+	)
+
+	res.status(201).json(org)
+}
+
+// PUT /api/organizations/:id/status
+export const updateStatus = async (req, res) => {
+	const id = parseInt(req.params.id, 10)
+	if (isNaN(id)) {
+		return res.status(400).json({ message: 'Invalid organization ID' })
+	}
+
+	const { status, rejectionReason } = req.body
+
+	const validStatuses = Object.values(OrganizationStatus)
+	if (!validStatuses.includes(status)) {
+		return res
+			.status(400)
+			.json({ message: `Invalid status. Allowed: ${validStatuses.join(', ')}` })
+	}
+
+	const org = await findOrganizationById(id)
+	if (!org) {
+		return res.status(404).json({ message: 'Organization not found' })
+	}
+
+	const updated = await setOrganizationStatus(
+		id,
+		status,
+		rejectionReason ?? null,
+	)
+	res.json(updated)
 }
 
 // POST /api/organizations/import
@@ -102,12 +100,12 @@ export const importCSV = async (req, res) => {
 		return res.status(400).json({ errors: parseErrors })
 	}
 
-	const created = []
 	const errors = [...parseErrors]
+	const validRows = []
 
+	// Валідація рядків
 	for (const [i, row] of rows.entries()) {
-		const rowNum = i + 2 // +2: рядок 1 — заголовок
-
+		const rowNum = i + 2
 		if (!row.name || row.name.trim().length < 2) {
 			errors.push({
 				row: rowNum,
@@ -116,66 +114,19 @@ export const importCSV = async (req, res) => {
 			})
 			continue
 		}
+		validRows.push({ ...row, _rowNum: rowNum })
+	}
 
-		const existing = await prisma.organization.findFirst({
-			where: { name: row.name.trim() },
+	const created = []
+
+	for (const row of validRows) {
+		const org = await createOrganization({
+			name: row.name.trim(),
+			description: row.description?.trim() || null,
+			websiteUrl: row.websiteUrl?.trim() || null,
 		})
-		if (existing) {
-			errors.push({
-				row: rowNum,
-				field: 'name',
-				message: `Duplicate: "${row.name}" already exists`,
-			})
-			continue
-		}
-
-		const org = await prisma.organization.create({
-			data: {
-				name: row.name.trim(),
-				description: row.description?.trim() || null,
-				website_url: row.website_url?.trim() || null,
-				status: 'pending',
-			},
-		})
-		created.push(org.org_id)
+		created.push(org.id)
 	}
 
-	res.status(207).json({
-		created: created.length,
-		errors,
-	})
+	res.status(207).json({ created: created.length, errors })
 }
-
-// PUT /api/organizations/:id/status
-export const updateStatus = async (req, res) => {
-	const { status, rejection_reason } = req.body
-	const orgId = Number(req.params.id)
-
-	const org = await prisma.organization.findUnique({ where: { org_id: orgId } })
-	if (!org) {
-		return res.status(404).json({ message: 'Organization not found' })
-	}
-
-	const updated = await prisma.organization.update({
-		where: { org_id: orgId },
-		data: {
-			status,
-			rejection_reason:
-				status === 'rejected' ? (rejection_reason ?? null) : null,
-			approved_at: status === 'approved' ? new Date() : undefined,
-			updated_at: new Date(),
-		},
-	})
-
-	res.json(normalizeOrg(updated))
-}
-
-// ─── helpers ────────────────────────────────────────────────────────────────
-
-function normalizeOrg(org) {
-	return {
-		...org,
-		categories: org.categories?.map(c => c.category) ?? [],
-	}
-}
-//xD
