@@ -1,43 +1,61 @@
 const express = require('express');
-
-// Створюємо об'єкт роутера для маршрутів, пов'язаних з організаціями
 const router = express.Router();
-
-// Імпортуємо контролер організацій.
-// У ньому будуть функції getAll, getById, create, importCSV, updateStatus.
-// Кожна функція відповідає за свій ендпоінт.
+const { body, param } = require('express-validator');
 const organizationsController = require('../controllers/organizations');
-
-// Імпортуємо asyncHandler 
+const validate = require('../middleware/validate');
 const asyncHandler = require('../middleware/asyncHandler');
+const upload = require('../middleware/upload');
 
-// Перегляд каталогів організацій з можливістю фільтрації за категорією та статусом
-// Логіка фільтрації буде всередині organizationsController.getAll — 
-// він прочитає req.query і передасть потрібні параметри в репозиторій
-router.get('/', asyncHandler(organizationsController.getAll));
+// Отримати всі схвалені організації
+// Використовується на головній сторінці каталогу
+router.get('/',
+  validate,
+  asyncHandler(organizationsController.getAll)
+);
 
-// GET /api/organizations/:id
-// Логіка отримати повну інформацію про одну конкретну організацію
-// :id — це динамічний параметр, який буде доступний у контролері як req.params.id
-// Можливо, це вважливо знати, цей маршрут має бути після GET /, бо інакше Express сприйме слово import в URL як :id.
-router.get('/:id', asyncHandler(organizationsController.getById));
+// Отримати заявки, які чекають на модерацію
+// Використовується адміном
+router.get('/pending',
+  validate,
+  asyncHandler(organizationsController.getPending)
+);
 
-// Додавання організації 
-// POST /api/organizations
-// Клієнт надсилає JSON з даними організації в тілі запиту
-// Контролер створить організацію зі статусом pending простими словами очікує модерації, і 
-// поверне її дані у відповіді.
-router.post('/', asyncHandler(organizationsController.create));
-// POST /api/organizations/import
-// Завантаження CSV-файлу з даними організацій
-// Клієнт надсилає файл через multipart/form-data з полем "file"
-router.post('/import', asyncHandler(organizationsController.importCSV));
+// Отримати одну організацію по її ID
+// Використовується на сторінці деталей організації
+router.get('/:id',
+  param('id').isInt({ min: 1 }).withMessage('id має бути цілим числом'),
+  validate,
+  asyncHandler(organizationsController.getById)
+);
 
-//Модерація організацій
-// PUT /api/organizations/:id/status
-// Змінити статус організації тобто можна схвалити, відхилити або архівувати заявку на додавання організації
-// ID організації, статус якої змінюємо передається в URL як :id, а новий статус в тілі запиту.
-router.put('/:id/status', asyncHandler(organizationsController.updateStatus));
+// Створити нову заявку на додавання організації
+// Використовується коли користувач заповнює форму
+router.post('/',
+  body('name').trim().isLength({ min: 2, max: 255 }).withMessage('name має бути від 2 до 255 символів'),
+  body('description').optional().isLength({ max: 1000 }).withMessage('description максимум 1000 символів'),
+  body('website_url').optional().isURL({ protocols: ['https'], require_protocol: true }).withMessage('website_url має бути валідним HTTPS URL'),
+  body('category_ids').isArray({ min: 1, max: 5 }).withMessage('category_ids має бути масивом від 1 до 5 категорій'),
+  body('category_ids.*').isInt({ min: 1 }).withMessage('кожен category_id має бути цілим числом'),
+  validate,
+  asyncHandler(organizationsController.create)
+);
 
-// Експортуємо роутер, щоб його можна було підключити в index.js
+// Завантажити багато організацій одним CSV файлом
+// Використовується коли хочуть додати одразу багато записів
+router.post('/import',
+  upload.single('file'),
+  validate,
+  asyncHandler(organizationsController.importCSV)
+);
+
+// Змінити статус організації (схвалити/відхилити/заархівувати)
+// Використовується адміном під час модерації
+router.put('/:id/status',
+  param('id').isInt({ min: 1 }).withMessage('id має бути цілим числом'),
+  body('status').isIn(['approved', 'rejected', 'archived']).withMessage('status має бути approved, rejected або archived'),
+  body('rejection_reason').optional().isString().withMessage('rejection_reason має бути рядком'),
+  validate,
+  asyncHandler(organizationsController.updateStatus)
+);
+
 module.exports = router;
