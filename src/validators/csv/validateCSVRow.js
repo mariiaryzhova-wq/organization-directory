@@ -22,6 +22,7 @@ export const validateRow = (row, rowCount, results, errors) => {
     description: row.description?.trim() || null,
 
     website_url: row.website_url?.trim() || null,
+    websiteUrl: row.website_url?.trim() || null,
   };
 
   // 2. Додаткова перевірка:

@@ -1,6 +1,7 @@
 import fs from "fs";
 import csv from "csv-parser";
 import iconv from "iconv-lite";
+import { Readable } from "stream";
 
 import { MAX_ROWS } from "../constants/constantsCSVParser.js";
 
@@ -9,8 +10,8 @@ import { validateHeaders } from "../validators/csv/validateCSVHeaders.js";
 import { validateRow } from "../validators/csv/validateCSVRow.js";
 
 // Головна функція парсингу CSV
-// Приймає шлях до файлу
-export const parseCSV = (filePath) => {
+// Приймає шлях до файлу або буфер
+export const parseCSV = (input) => {
   // Promise потрібен, бо стріми працюють асинхронно
   return new Promise((resolve, reject) => {
     // Масив валідних рядків
@@ -26,16 +27,25 @@ export const parseCSV = (filePath) => {
     // Щоб headers валідовувались тільки 1 раз
     let headersChecked = false;
 
-    // 1. Перевірка файлу ДО запуску стріму
+    // 1. Перевірка файлу або буфера ДО запуску стріму
     try {
-      validateFile(filePath);
+      if (Buffer.isBuffer(input)) {
+        if (input.length > 8 * 1024 * 1024) {
+          throw new Error("File size exceeds 8MB");
+        }
+      } else {
+        validateFile(input);
+      }
     } catch (err) {
       return reject(err);
     }
 
-    // 2. Створення stream читання файлу
-    fs.createReadStream(filePath)
+    // 2. Створення stream читання
+    const stream = Buffer.isBuffer(input)
+      ? Readable.from(input)
+      : fs.createReadStream(input);
 
+    stream
       // 3. Декодування UTF-8
       .pipe(iconv.decodeStream("utf-8"))
 
@@ -83,6 +93,7 @@ export const parseCSV = (filePath) => {
       .on("end", () => {
         resolve({
           data: results,
+          rows: results,
           errors,
         });
       })
