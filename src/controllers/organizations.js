@@ -9,6 +9,7 @@ import {
 import { OrganizationStatus } from '../db/definitions.js'
 import { parseCSV } from '../utils/csvParser.js'
 
+<<<<<<< HEAD
 // GET /api/organizations
 export const getAll = async (req, res) => {
 	const organizations = await findAllApprovedOrganizations()
@@ -130,3 +131,8 @@ export const importCSV = async (req, res) => {
 
 	res.status(207).json({ created: created.length, errors })
 }
+=======
+export default {
+    // Експорт функцій контролера
+};
+>>>>>>> origin/main

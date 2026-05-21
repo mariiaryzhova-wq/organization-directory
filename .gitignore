@@ -4,3 +4,9 @@ node_modules/
 *.log
 *.pdf
 *.odt
+
+/src/generated/prisma
+.idea
+
+/generated/prisma
+/tmp/

@@ -1,4 +1,4 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
 // TODO: Імпортувати контролери
 
@@ -14,4 +14,4 @@ const router = express.Router();
 // GET /api/organizations?status=pending
 // PUT /api/organizations/:id/state
 
-module.exports = router;
+export default router;
