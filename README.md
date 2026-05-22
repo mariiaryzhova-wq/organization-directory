@@ -10,7 +10,7 @@
 
 * Runtime: [Node.js](https://nodejs.org/en/docs)
 * Framework: [Express.js](https://expressjs.com/)
-* База даних: [MySQL](https://dev.mysql.com/doc/
+* База даних: [MySQL](https://dev.mysql.com/doc/)
 * ORM: [Prisma](https://www.prisma.io/docs)
 * Валідація: [express-validator](https://www.prisma.io/docs)
 * Обробка файлів:
@@ -96,11 +96,9 @@ npm run db:seed
 **POST /api/organizations/import** — Масове завантаження організацій через CSV файл.
 
 ### Модерація (Адміністратор)
-**GET /api/organizations?status=pending** — Перегляд заявок, що очікують підтвердження.
+**GET /api/organizations?status=pending&category=7** — Перегляд заявок, що очікують підтвердження.
 
-**PUT /api/organizations/:id/state** — Зміна статусу організації (approved або rejected + rejection_reason).
-
-**PUT /api/organizations/:id/state** — Зміна статусу організації (pending, approved, rejected, archived).
+**PUT /api/organizations/:id/status** — Зміна статусу організації (pending, approved, rejected, archived).
 
 ## Правила валідації та обробки помилок
 Всі помилки валідації та сервера повертаються в єдиному форматі:
