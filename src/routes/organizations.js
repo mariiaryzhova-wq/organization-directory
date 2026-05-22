@@ -24,7 +24,7 @@ router.post('/import',
 router.put('/:id/status',
   param('id').isInt({ min: 1 }).withMessage('id має бути цілим числом'),
   body('status').isIn(['approved', 'rejected', 'archived']).withMessage('status має бути approved, rejected або archived'),
-  body('rejectionReason').optional().isString().withMessage('rejectionReason має бути рядком'),
+  body('rejectionReason').optional({nullable: true}).isString().withMessage('rejectionReason має бути рядком'),
   validate,
   asyncHandler(organizationsController.updateStatus)
 );

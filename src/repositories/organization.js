@@ -2,8 +2,9 @@ import { prisma } from '../db/prisma.js';
 import { OrganizationStatus } from '../db/definitions.js';
 
 // Запити до таблиці ORGANIZATIONS
-    // Запит на додавання нової організації. Крок 1. Створення основних даних організації
-export async function createOrganization(newOrganization) {
+
+// Запит на додавання нової організації. Крок 1. Створення основних даних організації
+export async function createOrganization(newOrganization, categoryIds) {
     try {
         return await prisma.organization.create({
             data: {
@@ -11,7 +12,22 @@ export async function createOrganization(newOrganization) {
                 description: newOrganization.description,
                 websiteUrl: newOrganization.websiteUrl,
                 status: OrganizationStatus.pending,
+                categories: {
+                    create: categoryIds.map((categoryId) => ({
+                        category: {
+                            connect: {
+                                id: Number(categoryId),
+                            },
+                        },
+                    })),
+                },
             },
+            include: {
+                categories: {
+                    select: { category: { select: { id: true, name: true } } },
+                },
+            },
+
         });
     } catch (error) {
         console.error('Database Error:', error);
@@ -20,8 +36,7 @@ export async function createOrganization(newOrganization) {
 }
 
 // Запит на додавання нової організації. Крок 2. Додавання категорії до організації
-
-export async function AssignCategoryToOrganization(orgId, categoryId) {
+export async function assignCategoryToOrganization(orgId, categoryId) {
     try {
         return await prisma.organizationCategory.create({
             data: {
@@ -63,6 +78,11 @@ export async function findPendingListOfOrganizations(){
             where: {
                 status: OrganizationStatus.pending,
             },
+            include: {
+                categories: {
+                    select: { category: { select: { id: true, name: true } } },
+                },
+            },
             orderBy: {
                 createdAt: 'desc',
             },
@@ -79,6 +99,11 @@ export async function findOrganizationById(orgId) {
         return await prisma.organization.findUnique({
             where: {
                 id: Number(orgId),
+            },
+            include: {
+                categories: {
+                    select: { category: { select: { id: true, name: true } } },
+                },
             },
         });
     } catch (error) {
@@ -102,6 +127,11 @@ export async function setOrganizationStatus(
             data: {
                 status: status,
                 rejectionReason: rejectionReason,
+            },
+            include: {
+                categories: {
+                    select: { category: { select: { id: true, name: true } } },
+                },
             },
         });
     } catch (error) {

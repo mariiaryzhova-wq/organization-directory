@@ -1,6 +1,5 @@
 import {
 	createOrganization,
-	AssignCategoryToOrganization,
 	findAllApprovedOrganizations,
 	findPendingListOfOrganizations,
 	findOrganizationById,
@@ -11,13 +10,13 @@ import { parseCSV } from '../utils/csvParser.js'
 // GET /api/organizations
 export const getAll = async (req, res) => {
 	const organizations = await findAllApprovedOrganizations()
-	res.json(organizations)
+	res.json(organizations.map(mapOrganisationToDto))
 }
 
 // GET /api/organizations/pending
 export const getPending = async (req, res) => {
 	const organizations = await findPendingListOfOrganizations()
-	res.json(organizations)
+	res.json(organizations.map(mapOrganisationToDto))
 }
 
 // GET /api/organizations/:id
@@ -36,7 +35,7 @@ export const getById = async (req, res) => {
 		})
 	}
 
-	res.json(org)
+	res.json(mapOrganisationToDto(org))
 }
 
 // POST /api/organizations
@@ -49,15 +48,9 @@ export const create = async (req, res) => {
 		})
 	}
 
-	const org = await createOrganization({ name, description, websiteUrl })
+	const org = await createOrganization({ name, description, websiteUrl }, categoryIds )
 
-	await Promise.all(
-		categoryIds.map(categoryId =>
-			AssignCategoryToOrganization(org.id, categoryId),
-		),
-	)
-
-	res.status(201).json(org)
+	res.status(201).json(mapOrganisationToDto(org))
 }
 
 // PUT /api/organizations/:id/status
@@ -85,12 +78,12 @@ export const updateStatus = async (req, res) => {
 		})
 	}
 
-	const updated = await setOrganizationStatus(
+	const updatedOrg = await setOrganizationStatus(
 		id,
 		status,
 		rejectionReason ?? null,
 	)
-	res.json(updated)
+	res.json(mapOrganisationToDto(updatedOrg))
 }
 
 // POST /api/organizations/import
@@ -141,4 +134,11 @@ export const importCSV = async (req, res) => {
 	}
 
 	res.status(207).json({ created: created.length, errors })
+}
+
+function mapOrganisationToDto(org) {
+	return {
+		...org,
+		categories: org.categories?.map(c => c.category) ?? [],
+	}
 }
