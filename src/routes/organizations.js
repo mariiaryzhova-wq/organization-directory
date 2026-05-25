@@ -1,5 +1,5 @@
 import express from 'express';
-import { body, param } from 'express-validator';
+import { body, param, query } from 'express-validator';
 import * as organizationsController from '../controllers/organizations.js';
 import validate from '../middleware/validate.js';
 import asyncHandler from '../middleware/asyncHandler.js';
@@ -7,7 +7,14 @@ import upload from '../middleware/upload.js';
 import { createOrganizationValidation } from '../validators/organization/organizationValidators.js';
 const router = express.Router();
 
-router.get('/', validate, asyncHandler(organizationsController.getAll));
+router.get('/',
+  query('status').optional().isIn(['pending', 'approved', 'rejected', 'archived']).withMessage('status має бути pending, approved, rejected або archived'),
+  query('categoryId').optional().isInt({ min: 1 }).withMessage('categoryId має бути цілим додатним числом'),
+  query('limit').optional().isInt({ min: 1 }).withMessage('limit має бути цілим додатним числом'),
+  query('offset').optional().isInt({ min: 0 }).withMessage('offset має бути цілим невід’ємним числом'),
+  validate,
+  asyncHandler(organizationsController.getOrganisations)
+);
 router.get('/pending', validate, asyncHandler(organizationsController.getPending));
 router.get('/:id', 
   param('id').isInt({ min: 1 }).withMessage('id має бути цілим числом'), 

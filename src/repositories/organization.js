@@ -3,7 +3,7 @@ import { OrganizationStatus } from '../db/definitions.js';
 
 // Запити до таблиці ORGANIZATIONS
 
-// Запит на додавання нової організації. Крок 1. Створення основних даних організації
+// Створення нової організації.
 export async function createOrganization(newOrganization, categoryIds) {
     try {
         return await prisma.organization.create({
@@ -35,7 +35,7 @@ export async function createOrganization(newOrganization, categoryIds) {
     }
 }
 
-// Запит на додавання нової організації. Крок 2. Додавання категорії до організації
+// Призначення нової категорії до організації(organizationCategory)
 export async function assignCategoryToOrganization(orgId, categoryId) {
     try {
         return await prisma.organizationCategory.create({
@@ -50,28 +50,41 @@ export async function assignCategoryToOrganization(orgId, categoryId) {
     }
 }
 
-// Запит на отримання списку всіх підтверджених організацій
-export async function findAllApprovedOrganizations(){
+// Пошук організацій за query parameters
+export async function findOrganizations(filters, pagination){
     try {
+        const { categoryId, status } = filters ?? {};
+
         return await prisma.organization.findMany({
             where: {
-                status: OrganizationStatus.approved,
+                status: status ?? OrganizationStatus.approved,
+                ...(categoryId !== undefined ? {
+                    categories: {
+                        some: {
+                            categoryId: Number(categoryId),
+                        },
+                    },
+                } : {}),
+            },
+            include: {
+                categories: {
+                    select: { category: { select: { id: true, name: true } } },
+                },
             },
             orderBy: {
                 createdAt: 'desc',
             },
-            // paginate: {
-            //     limit: 10,
-            //     offset: 0,
-            // },
+            ...(pagination?.limit !== undefined ? { take: Number(pagination.limit) } : {}),
+            ...(pagination?.offset !== undefined ? { skip: Number(pagination.offset) } : {}),
         });
+
     } catch (error) {
         console.error('Database Error:', error);
-        throw new Error('Failed to fetch all organizations');
+        throw new Error('Failed to fetch organizations by query');
     }
 }
 
-// Запит лист очікування на додавання організації
+// Пошук усіх організацій, що очікують на підтвердження
 export async function findPendingListOfOrganizations(){
     try {
         return await prisma.organization.findMany({
@@ -93,7 +106,7 @@ export async function findPendingListOfOrganizations(){
     }
 }
 
-// Запит на отримання організації за її ID
+// Пошук організації за ID
 export async function findOrganizationById(orgId) {
     try {
         return await prisma.organization.findUnique({

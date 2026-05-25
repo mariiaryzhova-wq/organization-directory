@@ -1,16 +1,26 @@
 import {
 	createOrganization,
-	findAllApprovedOrganizations,
+	findOrganizations,
 	findPendingListOfOrganizations,
 	findOrganizationById,
 	setOrganizationStatus,
 } from '../repositories/organization.js'
 import { OrganizationStatus } from '../db/definitions.js'
 import { parseCSV } from '../utils/csvParser.js'
-// GET /api/organizations
-export const getAll = async (req, res) => {
-	const organizations = await findAllApprovedOrganizations()
+
+// GET /api/organizations?status=<status>&categoryId=<categoryId>&limit=<limit>&offset=<offset>
+export const getOrganisations = async (req, res) => {
+	const { status, categoryId, limit, offset } = req.query
+	const filters = { status, categoryId }
+	const pagination = { limit, offset }
+
+	const organizations = await findOrganizations(
+		filters,
+		pagination
+	)
+
 	res.json(organizations.map(mapOrganisationToDto))
+
 }
 
 // GET /api/organizations/pending
