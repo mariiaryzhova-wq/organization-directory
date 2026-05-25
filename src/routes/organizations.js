@@ -9,7 +9,7 @@ const router = express.Router();
 
 router.get('/',
   query('status').optional().isIn(['pending', 'approved', 'rejected', 'archived']).withMessage('status має бути pending, approved, rejected або archived'),
-  query('categoryId').optional().isInt({ min: 1 }).withMessage('categoryId має бути цілим додатним числом'),
+  query('category_id').optional().isInt({ min: 1 }).withMessage('category_id має бути цілим додатним числом'),
   query('limit').optional().isInt({ min: 1 }).withMessage('limit має бути цілим додатним числом'),
   query('offset').optional().isInt({ min: 0 }).withMessage('offset має бути цілим невід’ємним числом'),
   validate,

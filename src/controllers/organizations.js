@@ -10,8 +10,8 @@ import { parseCSV } from '../utils/csvParser.js'
 
 // GET /api/organizations?status=<status>&categoryId=<categoryId>&limit=<limit>&offset=<offset>
 export const getOrganisations = async (req, res) => {
-	const { status, categoryId, limit, offset } = req.query
-	const filters = { status, categoryId }
+	const { status, category_id: categoryId, limit, offset } = req.query
+	const filters = { categoryId, status }
 	const pagination = { limit, offset }
 
 	const organizations = await findOrganizations(
