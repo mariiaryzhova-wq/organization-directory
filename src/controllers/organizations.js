@@ -1,17 +1,22 @@
 import {
 	createOrganization,
 	findOrganizations,
-	findPendingListOfOrganizations,
 	findOrganizationById,
 	setOrganizationStatus,
 } from '../repositories/organization.js'
 import { OrganizationStatus } from '../db/definitions.js'
 import { parseCSV } from '../utils/csvParser.js'
 
-// GET /api/organizations?status=<status>&categoryId=<categoryId>&limit=<limit>&offset=<offset>
+// GET /api/organizations?status=<status>&category_id=<categoryId>&limit=<limit>&offset=<offset>
 export const getOrganisations = async (req, res) => {
-	const { status, category_id: categoryId, limit, offset } = req.query
-	const filters = { categoryId, status }
+	const { status, category_id: categoryId, lat, lng, radiusKm, limit, offset } = req.query
+	const filters = {
+		categoryId,
+		status,
+		geoParams: lat !== undefined && lng !== undefined && radiusKm !== undefined
+			? { lat, lng, radiusKm }
+			: undefined,
+	}
 	const pagination = { limit, offset }
 
 	const organizations = await findOrganizations(
@@ -21,12 +26,6 @@ export const getOrganisations = async (req, res) => {
 
 	res.json(organizations.map(mapOrganisationToDto))
 
-}
-
-// GET /api/organizations/pending
-export const getPending = async (req, res) => {
-	const organizations = await findPendingListOfOrganizations()
-	res.json(organizations.map(mapOrganisationToDto))
 }
 
 // GET /api/organizations/:id

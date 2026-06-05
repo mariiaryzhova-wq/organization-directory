@@ -1,5 +1,6 @@
 import { prisma } from '../db/prisma.js';
 import { OrganizationStatus } from '../db/definitions.js';
+import { getBoundingBox } from '../utils/geoUtils.js';
 
 // Запити до таблиці ORGANIZATIONS
 
@@ -53,18 +54,13 @@ export async function assignCategoryToOrganization(orgId, categoryId) {
 // Пошук організацій за query parameters
 export async function findOrganizations(filters, pagination){
     try {
-        const { categoryId, status } = filters ?? {};
+        const { categoryId, status, geoParams } = filters ?? {};
 
         return await prisma.organization.findMany({
             where: {
                 status: status ?? OrganizationStatus.approved,
-                ...(categoryId !== undefined ? {
-                    categories: {
-                        some: {
-                            categoryId: Number(categoryId),
-                        },
-                    },
-                } : {}),
+                ...categoryFilter(categoryId),
+                ...geoFilter(geoParams),
             },
             include: {
                 categories: {
@@ -81,28 +77,6 @@ export async function findOrganizations(filters, pagination){
     } catch (error) {
         console.error('Database Error:', error);
         throw new Error('Failed to fetch organizations by query');
-    }
-}
-
-// Пошук усіх організацій, що очікують на підтвердження
-export async function findPendingListOfOrganizations(){
-    try {
-        return await prisma.organization.findMany({
-            where: {
-                status: OrganizationStatus.pending,
-            },
-            include: {
-                categories: {
-                    select: { category: { select: { id: true, name: true } } },
-                },
-            },
-            orderBy: {
-                createdAt: 'desc',
-            },
-        });
-    } catch (error) {
-        console.error('Database Error:', error);
-        throw new Error('Failed to fetch pending list of organizations');
     }
 }
 
@@ -150,5 +124,34 @@ export async function setOrganizationStatus(
     } catch (error) {
         console.error('Database Error:', error);
         throw new Error(`Failed to set organization status: ${orgId}`);
+    }
+}
+
+/// Filter functions
+
+function geoFilter(geoParams) {
+    if (!geoParams) {
+        return {};
+    }
+
+    const { minLat, maxLat, minLng, maxLng } = getBoundingBox(geoParams);
+
+    return {
+        locations: {
+            some: {
+                latitude: { gte: minLat, lte: maxLat },
+                longitude: { gte: minLng, lte: maxLng },
+            },
+        },
+    };
+}
+
+function categoryFilter(categoryId) {
+    return categoryId === undefined ? {} : {
+        categories: {
+            some: {
+                categoryId: Number(categoryId),
+            },
+        },
     }
 }
