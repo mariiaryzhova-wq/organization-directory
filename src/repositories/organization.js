@@ -5,7 +5,7 @@ import { getBoundingBox } from '../utils/geoUtils.js';
 // Запити до таблиці ORGANIZATIONS
 
 // Створення нової організації.
-export async function createOrganization(newOrganization, categoryIds) {
+export async function createOrganization(newOrganization, categoryIds, locations) {
     try {
         return await prisma.organization.create({
             data: {
@@ -22,13 +22,18 @@ export async function createOrganization(newOrganization, categoryIds) {
                         },
                     })),
                 },
-            },
-            include: {
-                categories: {
-                    select: { category: { select: { id: true, name: true } } },
+                locations: {
+                    create: locations.map((location) => ({
+                        street: location.street,
+                        city: location.city,
+                        region: location.region,
+                        zipCode: location.zipCode,
+                        latitude: location.latitude,
+                        longitude: location.longitude,
+                    })),
                 },
             },
-
+            include: organizationWithCategoriesAndLocations(),
         });
     } catch (error) {
         console.error('Database Error:', error);
@@ -62,11 +67,7 @@ export async function findOrganizations(filters, pagination){
                 ...categoryFilter(categoryId),
                 ...geoFilter(geoParams),
             },
-            include: {
-                categories: {
-                    select: { category: { select: { id: true, name: true } } },
-                },
-            },
+            include: organizationWithCategoriesAndLocations(),
             orderBy: {
                 createdAt: 'desc',
             },
@@ -87,11 +88,7 @@ export async function findOrganizationById(orgId) {
             where: {
                 id: Number(orgId),
             },
-            include: {
-                categories: {
-                    select: { category: { select: { id: true, name: true } } },
-                },
-            },
+            include: organizationWithCategoriesAndLocations(),
         });
     } catch (error) {
         console.error('Database Error:', error);
@@ -115,11 +112,7 @@ export async function setOrganizationStatus(
                 status: status,
                 rejectionReason: rejectionReason,
             },
-            include: {
-                categories: {
-                    select: { category: { select: { id: true, name: true } } },
-                },
-            },
+            include: organizationWithCategoriesAndLocations(),
         });
     } catch (error) {
         console.error('Database Error:', error);
@@ -152,6 +145,18 @@ function categoryFilter(categoryId) {
             some: {
                 categoryId: Number(categoryId),
             },
+        },
+    }
+}
+
+// Include functions
+function organizationWithCategoriesAndLocations() {
+    return {
+        categories: {
+            select: { category: { select: { id: true, name: true } } },
+        },
+        locations: {
+            select: { location: { select: { id: true, street: true, city: true, region: true, zipCode: true, latitude: true, longitude: true } } },
         },
     }
 }
