@@ -192,3 +192,122 @@ VALUES
 
 -- Urban Shelter Project
 (12, 12);
+
+INSERT INTO locations (
+    organization_id,
+    street,
+    city,
+    region,
+    zip_code,
+    latitude,
+    longitude
+)
+VALUES
+    (
+        1,
+        '15 Poshtovyi Ave',
+        'Kryvyi Rih',
+        'Dnipropetrovsk Oblast',
+        '50000',
+        47.9101000,
+        33.3918000
+    ),
+    (
+        2,
+        '42 Heroiv ATO Street',
+        'Kryvyi Rih',
+        'Dnipropetrovsk Oblast',
+        '50005',
+        47.9145000,
+        33.4012000
+    ),
+    (
+        3,
+        '8 Metalurhiv Ave',
+        'Kryvyi Rih',
+        'Dnipropetrovsk Oblast',
+        '50027',
+        47.8968000,
+        33.4203000
+    ),
+    (
+        4,
+        '21 Sobornosti Street',
+        'Kryvyi Rih',
+        'Dnipropetrovsk Oblast',
+        '50036',
+        47.9214000,
+        33.3821000
+    ),
+    (
+        5,
+        '10 Universytetska Street',
+        'Kryvyi Rih',
+        'Dnipropetrovsk Oblast',
+        '50051',
+        47.9387000,
+        33.4324000
+    ),
+    (
+        6,
+        '33 Tsentralnyi Ave',
+        'Kryvyi Rih',
+        'Dnipropetrovsk Oblast',
+        '50065',
+        47.9019000,
+        33.3765000
+    ),
+    (
+        7,
+        '12 Kobylianskoho Street',
+        'Kryvyi Rih',
+        'Dnipropetrovsk Oblast',
+        '50071',
+        47.9296000,
+        33.4158000
+    ),
+    (
+        8,
+        '7 Freedom Square',
+        'Kryvyi Rih',
+        'Dnipropetrovsk Oblast',
+        '50074',
+        47.9173000,
+        33.3946000
+    ),
+    (
+        9,
+        '18 Sportyvna Street',
+        'Kryvyi Rih',
+        'Dnipropetrovsk Oblast',
+        '50079',
+        47.9442000,
+        33.4479000
+    ),
+    (
+        10,
+        '5 Soniachna Street',
+        'Kryvyi Rih',
+        'Dnipropetrovsk Oblast',
+        '50082',
+        47.8874000,
+        33.3617000
+    ),
+    (
+        11,
+        '27 IT Park Avenue',
+        'Kryvyi Rih',
+        'Dnipropetrovsk Oblast',
+        '50086',
+        47.9251000,
+        33.4055000
+    ),
+    (
+        12,
+        '9 Hromadska Street',
+        'Kryvyi Rih',
+        'Dnipropetrovsk Oblast',
+        '50089',
+        47.8986000,
+        33.4381000
+    );

@@ -1,10 +1,11 @@
 import { prisma } from '../db/prisma.js';
 import { OrganizationStatus } from '../db/definitions.js';
+import { getBoundingBox } from '../utils/geoUtils.js';
 
 // Запити до таблиці ORGANIZATIONS
 
 // Створення нової організації.
-export async function createOrganization(newOrganization, categoryIds) {
+export async function createOrganization(newOrganization, categoryIds, locations) {
     try {
         return await prisma.organization.create({
             data: {
@@ -21,13 +22,18 @@ export async function createOrganization(newOrganization, categoryIds) {
                         },
                     })),
                 },
-            },
-            include: {
-                categories: {
-                    select: { category: { select: { id: true, name: true } } },
+                locations: {
+                    create: locations.map((location) => ({
+                        street: location.street,
+                        city: location.city,
+                        region: location.region,
+                        zipCode: location.zipCode,
+                        latitude: location.latitude,
+                        longitude: location.longitude,
+                    })),
                 },
             },
-
+            include: organizationWithCategoriesAndLocations(),
         });
     } catch (error) {
         console.error('Database Error:', error);
@@ -53,24 +59,15 @@ export async function assignCategoryToOrganization(orgId, categoryId) {
 // Пошук організацій за query parameters
 export async function findOrganizations(filters, pagination){
     try {
-        const { categoryId, status } = filters ?? {};
+        const { categoryId, status, geoParams } = filters ?? {};
 
         return await prisma.organization.findMany({
             where: {
                 status: status ?? OrganizationStatus.approved,
-                ...(categoryId !== undefined ? {
-                    categories: {
-                        some: {
-                            categoryId: Number(categoryId),
-                        },
-                    },
-                } : {}),
+                ...categoryFilter(categoryId),
+                ...geoFilter(geoParams),
             },
-            include: {
-                categories: {
-                    select: { category: { select: { id: true, name: true } } },
-                },
-            },
+            include: organizationWithCategoriesAndLocations(),
             orderBy: {
                 createdAt: 'desc',
             },
@@ -84,28 +81,6 @@ export async function findOrganizations(filters, pagination){
     }
 }
 
-// Пошук усіх організацій, що очікують на підтвердження
-export async function findPendingListOfOrganizations(){
-    try {
-        return await prisma.organization.findMany({
-            where: {
-                status: OrganizationStatus.pending,
-            },
-            include: {
-                categories: {
-                    select: { category: { select: { id: true, name: true } } },
-                },
-            },
-            orderBy: {
-                createdAt: 'desc',
-            },
-        });
-    } catch (error) {
-        console.error('Database Error:', error);
-        throw new Error('Failed to fetch pending list of organizations');
-    }
-}
-
 // Пошук організації за ID
 export async function findOrganizationById(orgId) {
     try {
@@ -113,11 +88,7 @@ export async function findOrganizationById(orgId) {
             where: {
                 id: Number(orgId),
             },
-            include: {
-                categories: {
-                    select: { category: { select: { id: true, name: true } } },
-                },
-            },
+            include: organizationWithCategoriesAndLocations(),
         });
     } catch (error) {
         console.error('Database Error:', error);
@@ -141,14 +112,51 @@ export async function setOrganizationStatus(
                 status: status,
                 rejectionReason: rejectionReason,
             },
-            include: {
-                categories: {
-                    select: { category: { select: { id: true, name: true } } },
-                },
-            },
+            include: organizationWithCategoriesAndLocations(),
         });
     } catch (error) {
         console.error('Database Error:', error);
         throw new Error(`Failed to set organization status: ${orgId}`);
+    }
+}
+
+/// Filter functions
+
+function geoFilter(geoParams) {
+    if (!geoParams) {
+        return {};
+    }
+
+    const { minLat, maxLat, minLng, maxLng } = getBoundingBox(geoParams);
+
+    return {
+        locations: {
+            some: {
+                latitude: { gte: minLat, lte: maxLat },
+                longitude: { gte: minLng, lte: maxLng },
+            },
+        },
+    };
+}
+
+function categoryFilter(categoryId) {
+    return categoryId === undefined ? {} : {
+        categories: {
+            some: {
+                categoryId: Number(categoryId),
+            },
+        },
+    }
+}
+
+// Include functions
+function organizationWithCategoriesAndLocations() {
+    return {
+        categories: {
+            select: { category: { select: { id: true, name: true } } },
+        },
+        locations: {
+            select: { location: { select: { id: true, street: true, city: true, region: true, zipCode: true, latitude: true, longitude: true } } },
+        },
     }
 }
