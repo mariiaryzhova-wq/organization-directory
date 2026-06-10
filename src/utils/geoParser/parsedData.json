@@ -2996,7 +2996,7 @@
       "street": "вулиця Володимира Зінченка",
       "building": "31",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50076",
       "latitude": 47.9307881,
       "longitude": 33.4225808
@@ -3007,7 +3007,7 @@
       "street": "Німецька вулиця",
       "building": "5",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9062664,
       "longitude": 33.3454639
@@ -3018,7 +3018,7 @@
       "street": "вулиця Степана Бандери",
       "building": "21",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9047051,
       "longitude": 33.4033828
@@ -3029,7 +3029,7 @@
       "street": "вулиця Соборності",
       "building": "29б",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50006",
       "latitude": 47.8997265,
       "longitude": 33.394818
@@ -3040,7 +3040,7 @@
       "street": "Соборна вулиця",
       "building": "33б",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9001432,
       "longitude": 33.3983547
@@ -3051,7 +3051,7 @@
       "street": "вулиця Степана Тільги",
       "building": "4",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8966168,
       "longitude": 33.3962271
@@ -3062,7 +3062,7 @@
       "street": "проспект Металургів",
       "building": "22А",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.897667,
       "longitude": 33.3949218
@@ -3073,7 +3073,7 @@
       "street": "проспект Металургів",
       "building": "12",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50006",
       "latitude": 47.8947151,
       "longitude": 33.3956843
@@ -3084,7 +3084,7 @@
       "street": "Мистецька вулиця",
       "building": "2",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.900533,
       "longitude": 33.3994431
@@ -3095,7 +3095,7 @@
       "street": "вулиця Соборності",
       "building": "37",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9008404,
       "longitude": 33.4014275
@@ -3106,7 +3106,7 @@
       "street": "проспект Металургів",
       "building": "36",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50000-50479",
       "latitude": 47.9022389,
       "longitude": 33.3941006
@@ -3117,7 +3117,7 @@
       "street": "проспект Металургів",
       "building": "2а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50000-50479",
       "latitude": 47.9032313,
       "longitude": 33.3951431
@@ -3128,7 +3128,7 @@
       "street": "Мистецька вулиця",
       "building": "3",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9010742,
       "longitude": 33.3983363
@@ -3139,7 +3139,7 @@
       "street": "вулиця Соборності",
       "building": "34",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50006",
       "latitude": 47.9004417,
       "longitude": 33.4060695
@@ -3150,7 +3150,7 @@
       "street": "вулиця Віталія Матусевича",
       "building": "20а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9033415,
       "longitude": 33.4067055
@@ -3161,7 +3161,7 @@
       "street": "вулиця Соборності",
       "building": "49",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50006",
       "latitude": 47.9013014,
       "longitude": 33.407078
@@ -3172,7 +3172,7 @@
       "street": "вулиця Віталія Матусевича",
       "building": "39",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9044191,
       "longitude": 33.4089541
@@ -3183,7 +3183,7 @@
       "street": "вулиця Дениса Комара",
       "building": "9",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8947657,
       "longitude": 33.4095349
@@ -3194,7 +3194,7 @@
       "street": "вулиця Соборності",
       "building": "98",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50006",
       "latitude": 47.8990314,
       "longitude": 33.4244475
@@ -3205,7 +3205,7 @@
       "street": "Університетський проспект",
       "building": "2",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9099552,
       "longitude": 33.392569
@@ -3216,7 +3216,7 @@
       "street": "проспект Металургів",
       "building": "42",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50000-50479",
       "latitude": 47.9093418,
       "longitude": 33.3927965
@@ -3227,7 +3227,7 @@
       "street": "проспект Металургів",
       "building": "40",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50000-50479",
       "latitude": 47.9089653,
       "longitude": 33.3930877
@@ -3238,7 +3238,7 @@
       "street": "Університетський проспект",
       "building": "4-А",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9096771,
       "longitude": 33.3927578
@@ -3249,7 +3249,7 @@
       "street": "Університетський проспект",
       "building": "4",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9097376,
       "longitude": 33.3933847
@@ -3260,7 +3260,7 @@
       "street": "Університетський проспект",
       "building": "58",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9079277,
       "longitude": 33.4159727
@@ -3271,7 +3271,7 @@
       "street": "вулиця Петра Дорошенка",
       "building": "2",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9072699,
       "longitude": 33.4206125
@@ -3282,7 +3282,7 @@
       "street": "площа 95-й Квартал",
       "building": "10",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9114619,
       "longitude": 33.3919568
@@ -3293,7 +3293,7 @@
       "street": "Кокчетавська вулиця",
       "building": "1",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9030006,
       "longitude": 33.457774
@@ -3304,7 +3304,7 @@
       "street": "Магістральна вулиця",
       "building": "17а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9034644,
       "longitude": 33.4603658
@@ -3315,7 +3315,7 @@
       "street": "Колійна вулиця",
       "building": "24",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9178625,
       "longitude": 33.4667409
@@ -3326,7 +3326,7 @@
       "street": "Магістральна вулиця",
       "building": "8",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50055",
       "latitude": 47.9047464,
       "longitude": 33.4579111
@@ -3337,7 +3337,7 @@
       "street": "вулиця Гетьмана Івана Мазепи",
       "building": "76",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9114718,
       "longitude": 33.4550141
@@ -3348,7 +3348,7 @@
       "street": "Нікопольське шосе",
       "building": "4г",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8876539,
       "longitude": 33.3906145
@@ -3359,7 +3359,7 @@
       "street": "Центральний проспект",
       "building": "33",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9043731,
       "longitude": 33.3550394
@@ -3370,7 +3370,7 @@
       "street": "площа Визволення",
       "building": "2",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.908194,
       "longitude": 33.3406497
@@ -3381,7 +3381,7 @@
       "street": "проспект Героїв-Підпільників",
       "building": "1А",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9053666,
       "longitude": 33.375654
@@ -3392,7 +3392,7 @@
       "street": "вулиця Чкалова",
       "building": "44а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50002",
       "latitude": 47.9030968,
       "longitude": 33.3539995
@@ -3403,7 +3403,7 @@
       "street": "площа Шахтарської Слави",
       "building": "3а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9090802,
       "longitude": 33.3826153
@@ -3414,7 +3414,7 @@
       "street": "вулиця Героїв АТО",
       "building": "78а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9043089,
       "longitude": 33.4225075
@@ -3425,7 +3425,7 @@
       "street": "площа Визволення",
       "building": "11",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9071984,
       "longitude": 33.339151
@@ -3436,7 +3436,7 @@
       "street": "проспект Миру",
       "building": "29в",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9082738,
       "longitude": 33.3853187
@@ -3447,7 +3447,7 @@
       "street": "вулиця Гірничих Інженерів",
       "building": "13-О",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50002",
       "latitude": 47.9085214,
       "longitude": 33.349745
@@ -3458,7 +3458,7 @@
       "street": "Гетьманська вулиця",
       "building": "80",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50007",
       "latitude": 47.9071561,
       "longitude": 33.3758344
@@ -3469,7 +3469,7 @@
       "street": "площа Визволення",
       "building": "11а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9071986,
       "longitude": 33.3401936
@@ -3480,7 +3480,7 @@
       "street": "вулиця Рахманінова",
       "building": "7а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8910159,
       "longitude": 33.3143954
@@ -3491,7 +3491,7 @@
       "street": "вулиця Миколаївське Шосе",
       "building": "21",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8853902,
       "longitude": 33.286787
@@ -3502,7 +3502,7 @@
       "street": "Каховська вулиця",
       "building": "31",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8831177,
       "longitude": 33.3638437
@@ -3513,7 +3513,7 @@
       "street": "вулиця Криворіжсталі",
       "building": "5а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8829254,
       "longitude": 33.3877289
@@ -3524,7 +3524,7 @@
       "street": "Тбіліська вулиця",
       "building": "2",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8808537,
       "longitude": 33.3692411
@@ -3535,7 +3535,7 @@
       "street": "вулиця Всебратське-2",
       "building": "65в",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8805047,
       "longitude": 33.2563583
@@ -3546,7 +3546,7 @@
       "street": "вулиця Подлєпи",
       "building": "35",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8427224,
       "longitude": 33.3475457
@@ -3557,7 +3557,7 @@
       "street": "Вечірньокутська вулиця",
       "building": "64",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9243917,
       "longitude": 33.4477245
@@ -3568,7 +3568,7 @@
       "street": "вулиця Дніпровське Шосе",
       "building": "34",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9207104,
       "longitude": 33.4399511
@@ -3579,7 +3579,7 @@
       "street": "вулиця Кармелюка",
       "building": "4",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8338192,
       "longitude": 33.3457869
@@ -3590,7 +3590,7 @@
       "street": "Південний проспект",
       "building": "34",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8410219,
       "longitude": 33.3480332
@@ -3601,7 +3601,7 @@
       "street": "Південний проспект",
       "building": "1",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8327944,
       "longitude": 33.343456
@@ -3612,7 +3612,7 @@
       "street": "площа Визволення",
       "building": "5",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50099",
       "latitude": 47.9089137,
       "longitude": 33.3400347
@@ -3623,7 +3623,7 @@
       "street": "Поштовий проспект",
       "building": "5",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50000",
       "latitude": 47.9023282,
       "longitude": 33.340776
@@ -3634,7 +3634,7 @@
       "street": "Німецька вулиця",
       "building": "1а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9036569,
       "longitude": 33.3443342
@@ -3645,7 +3645,7 @@
       "street": "Каунаська вулиця",
       "building": "2б",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50000",
       "latitude": 47.9006405,
       "longitude": 33.3445668
@@ -3656,7 +3656,7 @@
       "street": "Поштовий проспект",
       "building": "39а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50000",
       "latitude": 47.907264,
       "longitude": 33.3434298
@@ -3667,7 +3667,7 @@
       "street": "майдан Олександра Химиченка",
       "building": "1",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9468759,
       "longitude": 33.4408888
@@ -3678,7 +3678,7 @@
       "street": "вулиця Соборності",
       "building": "29п",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8999566,
       "longitude": 33.3958546
@@ -3689,7 +3689,7 @@
       "street": "Південний проспект",
       "building": "44а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8806768,
       "longitude": 33.3601636
@@ -3700,7 +3700,7 @@
       "street": "Поштовий проспект",
       "building": "35б",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50000",
       "latitude": 47.9061131,
       "longitude": 33.3426971
@@ -3711,7 +3711,7 @@
       "street": "Кривбасівська вулиця",
       "building": "93",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50024",
       "latitude": 47.9160351,
       "longitude": 33.3336917
@@ -3722,7 +3722,7 @@
       "street": "проспект Миру",
       "building": "17а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50069",
       "latitude": 47.905933,
       "longitude": 33.3816321
@@ -3733,7 +3733,7 @@
       "street": "проспект Металургів",
       "building": "28а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9007931,
       "longitude": 33.3940566
@@ -3744,7 +3744,7 @@
       "street": "проспект Перемоги",
       "building": "11",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.6841204,
       "longitude": 33.1667897
@@ -3755,7 +3755,7 @@
       "street": "проспект Перемоги",
       "building": "11а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.6839623,
       "longitude": 33.1663102
@@ -3766,7 +3766,7 @@
       "street": "Соборна вулиця",
       "building": "4",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9455257,
       "longitude": 33.4382176
@@ -3777,7 +3777,7 @@
       "street": "вулиця Юрія Камінського",
       "building": "21а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50000-50479",
       "latitude": 47.9018387,
       "longitude": 33.3928501
@@ -3788,7 +3788,7 @@
       "street": "вулиця Героїв АТО",
       "building": "30-А",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50000-50479",
       "latitude": 47.9066619,
       "longitude": 33.3971027
@@ -3799,7 +3799,7 @@
       "street": "Європейський бульвар",
       "building": "14",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9359967,
       "longitude": 33.4400655
@@ -3810,7 +3810,7 @@
       "street": "вулиця Павла Глазового",
       "building": "26а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50076",
       "latitude": 47.9350924,
       "longitude": 33.4244434
@@ -3821,7 +3821,7 @@
       "street": "вулиця Генерала Радієвського",
       "building": "1а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9449838,
       "longitude": 33.4262561
@@ -3832,7 +3832,7 @@
       "street": "Спасівська вулиця",
       "building": "17а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9608975,
       "longitude": 33.4261317
@@ -3843,7 +3843,7 @@
       "street": "проспект 200-річчя Кривого Рогу",
       "building": "4а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9602691,
       "longitude": 33.4367189
@@ -3854,7 +3854,7 @@
       "street": "проспект 200-річчя Кривого Рогу",
       "building": "24",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9632838,
       "longitude": 33.4346936
@@ -3865,7 +3865,7 @@
       "street": "Виноградна вулиця",
       "building": "1",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9586937,
       "longitude": 33.4301336
@@ -3876,7 +3876,7 @@
       "street": "вулиця Віктора Оцерклевича",
       "building": "1г",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9631565,
       "longitude": 33.4280624
@@ -3887,7 +3887,7 @@
       "street": "бульвар Миколи Вороного",
       "building": "22",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9678004,
       "longitude": 33.4473229
@@ -3898,7 +3898,7 @@
       "street": "вулиця Володимира Великого",
       "building": "27а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50071",
       "latitude": 47.9433539,
       "longitude": 33.4189841
@@ -3909,7 +3909,7 @@
       "street": "Вечірній бульвар",
       "building": "31а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9358071,
       "longitude": 33.4337808
@@ -3920,7 +3920,7 @@
       "street": "вулиця Лісового",
       "building": "24а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9492089,
       "longitude": 33.4532138
@@ -3931,7 +3931,7 @@
       "street": "Свято-Миколаївська вулиця",
       "building": "28а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50000",
       "latitude": 47.9020449,
       "longitude": 33.3361006
@@ -3942,7 +3942,7 @@
       "street": "Женевська вулиця",
       "building": "6б",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50031",
       "latitude": 47.9832198,
       "longitude": 33.4417983
@@ -3953,7 +3953,7 @@
       "street": "Шурупова вулиця",
       "building": "2б",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.999043,
       "longitude": 33.4500089
@@ -3964,7 +3964,7 @@
       "street": "Ботанічна вулиця",
       "building": "23",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50079",
       "latitude": 48.1479907,
       "longitude": 33.5865327
@@ -3975,7 +3975,7 @@
       "street": "вулиця Володимира Терещенка",
       "building": "1е",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.1455258,
       "longitude": 33.5617963
@@ -3986,7 +3986,7 @@
       "street": "вулиця Антона Ігнатченка",
       "building": "1",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50079",
       "latitude": 48.1434568,
       "longitude": 33.5651624
@@ -3997,7 +3997,7 @@
       "street": "вулиця Володимира Терещенка",
       "building": "5а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50079",
       "latitude": 48.1454172,
       "longitude": 33.5633014
@@ -4008,7 +4008,7 @@
       "street": "Університетський проспект",
       "building": "44",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9079754,
       "longitude": 33.4053758
@@ -4019,7 +4019,7 @@
       "street": "вулиця Петра Калнишевського",
       "building": "15А",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50024",
       "latitude": 47.9133658,
       "longitude": 33.3367855
@@ -4030,7 +4030,7 @@
       "street": "вулиця Олександра Поля",
       "building": "30",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9020411,
       "longitude": 33.3502685
@@ -4041,7 +4041,7 @@
       "street": "Переяславська вулиця",
       "building": "3а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8334522,
       "longitude": 33.3456768
@@ -4052,7 +4052,7 @@
       "street": "Електрозаводська вулиця",
       "building": "53а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9951335,
       "longitude": 33.4902794
@@ -4063,7 +4063,7 @@
       "street": "вулиця Федора Караманиць",
       "building": "66А",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50059",
       "latitude": 48.0103235,
       "longitude": 33.4806742
@@ -4074,7 +4074,7 @@
       "street": "вулиця Кропивницького",
       "building": "21Б",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0220233,
       "longitude": 33.4685241
@@ -4085,7 +4085,7 @@
       "street": "вулиця Федора Караманиць",
       "building": "39",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50059",
       "latitude": 48.0213867,
       "longitude": 33.4734103
@@ -4096,7 +4096,7 @@
       "street": "вулиця Федора Караманиць",
       "building": "50",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50059",
       "latitude": 48.0137658,
       "longitude": 33.4766406
@@ -4107,7 +4107,7 @@
       "street": "Електрична вулиця",
       "building": "3б",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0026744,
       "longitude": 33.4449309
@@ -4118,7 +4118,7 @@
       "street": "вулиця Лисяка",
       "building": "6а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0313137,
       "longitude": 33.4786551
@@ -4129,7 +4129,7 @@
       "street": "вулиця Романа Шухевича",
       "building": "17",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.033429,
       "longitude": 33.4766573
@@ -4140,7 +4140,7 @@
       "street": "вулиця Романа Шухевича",
       "building": "16",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.034305,
       "longitude": 33.4792488
@@ -4151,7 +4151,7 @@
       "street": "вулиця Дмитра Войчишена",
       "building": "14а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0422189,
       "longitude": 33.4837621
@@ -4162,7 +4162,7 @@
       "street": "вулиця Сергія Колачевського",
       "building": "32В",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0507805,
       "longitude": 33.4854324
@@ -4173,7 +4173,7 @@
       "street": "вулиця Павла Глазового",
       "building": "28а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50076",
       "latitude": 47.9355785,
       "longitude": 33.4224928
@@ -4184,7 +4184,7 @@
       "street": "Магістральна вулиця",
       "building": "23",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9015179,
       "longitude": 33.4598475
@@ -4195,7 +4195,7 @@
       "street": "вулиця Едуарда Фукса",
       "building": "48а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50042",
       "latitude": 47.9720416,
       "longitude": 33.4356923
@@ -4206,7 +4206,7 @@
       "street": "вулиця Сергія Колачевського",
       "building": "93а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0710258,
       "longitude": 33.5067648
@@ -4217,7 +4217,7 @@
       "street": "Чарівна вулиця",
       "building": "1б",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0744185,
       "longitude": 33.5152114
@@ -4228,7 +4228,7 @@
       "street": "вулиця Сергія Колачевського",
       "building": "81/1",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0678618,
       "longitude": 33.5002041
@@ -4239,7 +4239,7 @@
       "street": "Прорізна вулиця",
       "building": "60",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50019",
       "latitude": 47.9077286,
       "longitude": 33.3134542
@@ -4250,7 +4250,7 @@
       "street": "площа Визволення",
       "building": "1-К",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9085421,
       "longitude": 33.3417075
@@ -4261,7 +4261,7 @@
       "street": "вулиця Савицького",
       "building": "17",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8369867,
       "longitude": 33.3496691
@@ -4272,7 +4272,7 @@
       "street": "вулиця Кропивницького",
       "building": "53Б",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0117126,
       "longitude": 33.4751749
@@ -4283,7 +4283,7 @@
       "street": "Ботанічна вулиця",
       "building": "14а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50079",
       "latitude": 48.1449454,
       "longitude": 33.583955
@@ -4294,7 +4294,7 @@
       "street": "вулиця Криворіжсталі",
       "building": "9в",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8819283,
       "longitude": 33.3832897
@@ -4305,7 +4305,7 @@
       "street": "Електрозаводська вулиця",
       "building": "28б",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9946084,
       "longitude": 33.4885306
@@ -4316,7 +4316,7 @@
       "street": "Сонячний мікрорайон",
       "building": "41А",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50056",
       "latitude": 47.9558287,
       "longitude": 33.4479446
@@ -4327,7 +4327,7 @@
       "street": "вулиця Сергія Колачевського",
       "building": "32Б",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50037",
       "latitude": 48.0509253,
       "longitude": 33.4855414
@@ -4338,7 +4338,7 @@
       "street": "вулиця Бірюзова",
       "building": "12а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.1472385,
       "longitude": 33.5476927
@@ -4349,7 +4349,7 @@
       "street": "вулиця Сергія Колачевського",
       "building": "55",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50082",
       "latitude": 48.07091,
       "longitude": 33.5148844
@@ -4360,7 +4360,7 @@
       "street": "вулиця Володимира Великого",
       "building": "25",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50071",
       "latitude": 47.9415824,
       "longitude": 33.4142686
@@ -4371,7 +4371,7 @@
       "street": "вулиця Каткова",
       "building": "2",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50102",
       "latitude": 47.6881738,
       "longitude": 33.1507245
@@ -4382,7 +4382,7 @@
       "street": "вулиця Вадима Гурова",
       "building": "17",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8954454,
       "longitude": 33.4038069
@@ -4393,7 +4393,7 @@
       "street": "Вечірній бульвар",
       "building": "20",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9405412,
       "longitude": 33.435172
@@ -4404,7 +4404,7 @@
       "street": "Чарівна вулиця",
       "building": "1г",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0740459,
       "longitude": 33.5144222
@@ -4415,7 +4415,7 @@
       "street": "вулиця Федора Караманиць",
       "building": "53б",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0099739,
       "longitude": 33.4832459
@@ -4426,7 +4426,7 @@
       "street": "вулиця Булди",
       "building": "4а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9991148,
       "longitude": 33.4552925
@@ -4437,7 +4437,7 @@
       "street": "вулиця Олексія Різниченка",
       "building": "5а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9707996,
       "longitude": 33.4426421
@@ -4448,7 +4448,7 @@
       "street": "вулиця Криворіжсталі",
       "building": "1к",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.876532,
       "longitude": 33.3575247
@@ -4459,7 +4459,7 @@
       "street": "вулиця Курчатова",
       "building": "1",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50084",
       "latitude": 47.9630788,
       "longitude": 33.4265433
@@ -4470,7 +4470,7 @@
       "street": "вулиця Криворіжсталі",
       "building": "50",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8799775,
       "longitude": 33.3713703
@@ -4481,7 +4481,7 @@
       "street": "проспект Металургів",
       "building": "15",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9006553,
       "longitude": 33.3931467
@@ -4492,7 +4492,7 @@
       "street": "проспект Металургів",
       "building": "24",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8992327,
       "longitude": 33.3951787
@@ -4503,7 +4503,7 @@
       "street": "Армавірська вулиця",
       "building": "13",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0341677,
       "longitude": 33.483118
@@ -4514,7 +4514,7 @@
       "street": "вулиця Едуарда Фукса",
       "building": "40",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50042",
       "latitude": 47.9745483,
       "longitude": 33.4359328
@@ -4525,7 +4525,7 @@
       "street": "вулиця Павла Глазового",
       "building": "4",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50076",
       "latitude": 47.9353857,
       "longitude": 33.418752
@@ -4536,7 +4536,7 @@
       "street": "вулиця Федора Караманиць",
       "building": "28",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0217651,
       "longitude": 33.4716738
@@ -4547,7 +4547,7 @@
       "street": "Січеславська вулиця",
       "building": "2",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50031",
       "latitude": 47.9856948,
       "longitude": 33.4387185
@@ -4558,7 +4558,7 @@
       "street": "вулиця Водопʼянова",
       "building": "29а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9337085,
       "longitude": 33.4384159
@@ -4569,7 +4569,7 @@
       "street": "вулиця Романа Шухевича",
       "building": "7",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0305638,
       "longitude": 33.4751162
@@ -4580,7 +4580,7 @@
       "street": "вулиця Романа Шухевича",
       "building": "19а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0369735,
       "longitude": 33.4796422
@@ -4591,7 +4591,7 @@
       "street": "майдан Олександра Химиченка",
       "building": "1",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50008",
       "latitude": 47.9472025,
       "longitude": 33.4401701
@@ -4602,7 +4602,7 @@
       "street": "вулиця Мартіна Шимановського",
       "building": "5",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50004",
       "latitude": 47.8953161,
       "longitude": 33.337562
@@ -4613,7 +4613,7 @@
       "street": "площа Визволення",
       "building": "1к",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9086294,
       "longitude": 33.3416549
@@ -4624,7 +4624,7 @@
       "street": "проспект Перемоги",
       "building": "34а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50102",
       "latitude": 47.6834905,
       "longitude": 33.1575455
@@ -4635,7 +4635,7 @@
       "street": "Свято-Миколаївська вулиця",
       "building": "41",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50000",
       "latitude": 47.9018188,
       "longitude": 33.3395335
@@ -4646,7 +4646,7 @@
       "street": "Свято-Миколаївська вулиця",
       "building": "10-А",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9061483,
       "longitude": 33.3309961
@@ -4657,7 +4657,7 @@
       "street": "вулиця Калнишевського",
       "building": "11",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9119446,
       "longitude": 33.339421
@@ -4668,7 +4668,7 @@
       "street": "вулиця Чкалова",
       "building": "44/6",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9023097,
       "longitude": 33.3514315
@@ -4679,7 +4679,7 @@
       "street": "Поштовий проспект",
       "building": "18",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9037148,
       "longitude": 33.3421825
@@ -4690,7 +4690,7 @@
       "street": "Січеславська вулиця",
       "building": "7",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50014",
       "latitude": 47.9875439,
       "longitude": 33.43776
@@ -4701,7 +4701,7 @@
       "street": "проспект Миру",
       "building": "7",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9050667,
       "longitude": 33.3721746
@@ -4712,7 +4712,7 @@
       "street": "Прорізна вулиця",
       "building": "89",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9072973,
       "longitude": 33.2974929
@@ -4723,7 +4723,7 @@
       "street": "вулиця Лісового",
       "building": "14-А",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9490311,
       "longitude": 33.4528756
@@ -4734,7 +4734,7 @@
       "street": "Ярославська вулиця",
       "building": "8",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.843523,
       "longitude": 33.3563463
@@ -4745,7 +4745,7 @@
       "street": "вулиця Соборності",
       "building": "39",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9005422,
       "longitude": 33.4027296
@@ -4756,7 +4756,7 @@
       "street": "Університетський проспект",
       "building": "3",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.910517,
       "longitude": 33.3935393
@@ -4767,7 +4767,7 @@
       "street": "вулиця Упіта",
       "building": "54",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50069",
       "latitude": 47.9364645,
       "longitude": 33.3951768
@@ -4778,7 +4778,7 @@
       "street": "вулиця Петра Дорошенка",
       "building": "5а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9016838,
       "longitude": 33.4199786
@@ -4789,7 +4789,7 @@
       "street": "вулиця Гетьмана Івана Мазепи",
       "building": "153",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9226811,
       "longitude": 33.4700042
@@ -4800,7 +4800,7 @@
       "street": "вулиця Всебратське-2",
       "building": "58-А",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50046",
       "latitude": 47.8796065,
       "longitude": 33.2549447
@@ -4811,7 +4811,7 @@
       "street": "Спасівська вулиця",
       "building": "17а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50021",
       "latitude": 47.9608413,
       "longitude": 33.4271538
@@ -4822,7 +4822,7 @@
       "street": "вулиця Олександра Поля",
       "building": "11",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.902739,
       "longitude": 33.3412541
@@ -4833,7 +4833,7 @@
       "street": "Рахманівська вулиця",
       "building": "6а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.7999689,
       "longitude": 33.2438152
@@ -4844,7 +4844,7 @@
       "street": "вулиця Бориса Глінки",
       "building": "7а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8050365,
       "longitude": 33.2416601
@@ -4855,7 +4855,7 @@
       "street": "вулиця Яцьківа",
       "building": "32",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8236615,
       "longitude": 33.265863
@@ -4866,7 +4866,7 @@
       "street": "Коломийцевська вулиця",
       "building": "19/1",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9777945,
       "longitude": 33.5122147
@@ -4877,7 +4877,7 @@
       "street": "Чарівна вулиця",
       "building": "1-Б",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0746811,
       "longitude": 33.5151646
@@ -4888,7 +4888,7 @@
       "street": "вулиця Віталія Матусевича",
       "building": "17а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9046336,
       "longitude": 33.403622
@@ -4899,7 +4899,7 @@
       "street": "Чарівна вулиця",
       "building": "1Б",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50000",
       "latitude": 48.0746354,
       "longitude": 33.5150632
@@ -4910,7 +4910,7 @@
       "street": "вулиця Петра Веропотвеляна",
       "building": "42б",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9035152,
       "longitude": 33.3505836
@@ -4921,7 +4921,7 @@
       "street": "вулиця Генерала Безручка",
       "building": "43",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.6809378,
       "longitude": 33.1575751
@@ -4932,7 +4932,7 @@
       "street": "вулиця Глінки",
       "building": "40а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50000",
       "latitude": 47.9000117,
       "longitude": 33.3492829
@@ -4943,7 +4943,7 @@
       "street": "5-й Зарічний мікрорайон",
       "building": "11-А",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0014629,
       "longitude": 33.4824872
@@ -4954,7 +4954,7 @@
       "street": "вулиця Івана Авраменка",
       "building": "21а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9373433,
       "longitude": 33.4276425
@@ -4965,7 +4965,7 @@
       "street": "Бульварний провулок",
       "building": "16",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50071",
       "latitude": 47.9376039,
       "longitude": 33.419779
@@ -4976,7 +4976,7 @@
       "street": "5-Заречный",
       "building": "7",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9992686,
       "longitude": 33.4817251
@@ -4987,7 +4987,7 @@
       "street": "проспект 200-річчя Кривого Рогу",
       "building": "12а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9655117,
       "longitude": 33.4352539
@@ -4998,7 +4998,7 @@
       "street": "вулиця Джона Маккейна",
       "building": "13",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0344034,
       "longitude": 33.4832921
@@ -5009,7 +5009,7 @@
       "street": "Комерційна вулиця",
       "building": "1",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50000",
       "latitude": 47.901597,
       "longitude": 33.3426848
@@ -5020,7 +5020,7 @@
       "street": "вулиця Деміденка",
       "building": "2",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9083784,
       "longitude": 33.3755341
@@ -5031,7 +5031,7 @@
       "street": "вулиця Військового Тилу",
       "building": "7",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0168562,
       "longitude": 33.468565
@@ -5042,7 +5042,7 @@
       "street": "проспект 200-річчя Кривого Рогу",
       "building": "24",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9632755,
       "longitude": 33.4349264
@@ -5053,7 +5053,7 @@
       "street": "вулиця Електроніки",
       "building": "1в",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9139157,
       "longitude": 33.355597
@@ -5064,7 +5064,7 @@
       "street": "вулиця Незалежності України",
       "building": "16-Б",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9483088,
       "longitude": 33.4560353
@@ -5075,7 +5075,7 @@
       "street": "Центральний проспект",
       "building": "37",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9042208,
       "longitude": 33.3581936
@@ -5086,7 +5086,7 @@
       "street": "вулиця Миколи Світальського",
       "building": "15",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9721202,
       "longitude": 33.4441048
@@ -5097,7 +5097,7 @@
       "street": "Південний проспект",
       "building": "35",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8412462,
       "longitude": 33.3468747
@@ -5108,7 +5108,7 @@
       "street": "Січеславська вулиця",
       "building": "41",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9971865,
       "longitude": 33.4440066
@@ -5119,7 +5119,7 @@
       "street": "Січеславська вулиця",
       "building": "13",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9957896,
       "longitude": 33.4397054
@@ -5130,7 +5130,7 @@
       "street": "вулиця Едуарда Фукса",
       "building": "36",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9753309,
       "longitude": 33.4359771
@@ -5141,7 +5141,7 @@
       "street": "Дніпровське шосе",
       "building": "8",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9091041,
       "longitude": 33.4233986
@@ -5152,7 +5152,7 @@
       "street": "Електрична вулиця",
       "building": "1а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0047047,
       "longitude": 33.4474406
@@ -5163,7 +5163,7 @@
       "street": "проспект 200-річчя Кривого Рогу",
       "building": "7Д",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50084",
       "latitude": 47.9644842,
       "longitude": 33.4366
@@ -5174,7 +5174,7 @@
       "street": "вулиця Едуарда Фукса",
       "building": "1А",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50031",
       "latitude": 47.9853183,
       "longitude": 33.4389304
@@ -5185,7 +5185,7 @@
       "street": "вулиця Мусоргського",
       "building": "26",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0374255,
       "longitude": 33.4810716
@@ -5196,7 +5196,7 @@
       "street": "вулиця Володимира Великого",
       "building": "3",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50071",
       "latitude": 47.9360513,
       "longitude": 33.4012824
@@ -5207,7 +5207,7 @@
       "street": "вулиця Водопʼянова",
       "building": "1",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50038",
       "latitude": 47.9398689,
       "longitude": 33.4408185
@@ -5218,7 +5218,7 @@
       "street": "вулиця Володимира Великого",
       "building": "22",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9393069,
       "longitude": 33.4112943
@@ -5229,7 +5229,7 @@
       "street": "Поштовий проспект",
       "building": "25",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9055316,
       "longitude": 33.3424035
@@ -5240,7 +5240,7 @@
       "street": "Алмазна вулиця",
       "building": "10А",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9021081,
       "longitude": 33.2957092
@@ -5251,7 +5251,7 @@
       "street": "вулиця Володимира Великого",
       "building": "21а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50071",
       "latitude": 47.9404648,
       "longitude": 33.411712
@@ -5262,7 +5262,7 @@
       "street": "вулиця Володимира Великого",
       "building": "21",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50071",
       "latitude": 47.9424509,
       "longitude": 33.4109733
@@ -5273,7 +5273,7 @@
       "street": "вулиця Володимира Великого",
       "building": "21",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50071",
       "latitude": 47.942357,
       "longitude": 33.4107024
@@ -5284,7 +5284,7 @@
       "street": "Святогеоргіївська вулиця",
       "building": "8а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50007",
       "latitude": 47.9041631,
       "longitude": 33.383169
@@ -5295,7 +5295,7 @@
       "street": "вулиця Сергія Колачевського",
       "building": "55",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50082",
       "latitude": 48.0710453,
       "longitude": 33.5143428
@@ -5306,7 +5306,7 @@
       "street": "вулиця Каткова",
       "building": "2",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50102",
       "latitude": 47.68707,
       "longitude": 33.1480375
@@ -5317,7 +5317,7 @@
       "street": "вулиця Каткова",
       "building": "2",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50102",
       "latitude": 47.6870159,
       "longitude": 33.1477651
@@ -5328,7 +5328,7 @@
       "street": "вулиця Каткова",
       "building": "2",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50102",
       "latitude": 47.6879495,
       "longitude": 33.1512928
@@ -5339,7 +5339,7 @@
       "street": "вулиця Каткова",
       "building": "2",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50102",
       "latitude": 47.687142,
       "longitude": 33.1484691
@@ -5350,7 +5350,7 @@
       "street": "Женевська вулиця",
       "building": "6б",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50031",
       "latitude": 47.9826054,
       "longitude": 33.4412395
@@ -5361,7 +5361,7 @@
       "street": "Женевська вулиця",
       "building": "6б",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9824579,
       "longitude": 33.44124
@@ -5372,7 +5372,7 @@
       "street": "вулиця Маршака",
       "building": "1а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50089",
       "latitude": 48.1434287,
       "longitude": 33.5832327
@@ -5383,7 +5383,7 @@
       "street": "вулиця Маршака",
       "building": "1а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50089",
       "latitude": 48.1434231,
       "longitude": 33.5835431
@@ -5394,7 +5394,7 @@
       "street": "вулиця Захисників Азовсталі",
       "building": "8",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0132511,
       "longitude": 33.4652334
@@ -5405,7 +5405,7 @@
       "street": "вулиця Ярослава Мудрого",
       "building": "40",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9121781,
       "longitude": 33.3964953
@@ -5416,7 +5416,7 @@
       "street": "Гагаріна",
       "building": "72",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9074921,
       "longitude": 33.4204105
@@ -5427,7 +5427,7 @@
       "street": "Гагарина",
       "building": "38",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9089878,
       "longitude": 33.4052065
@@ -5438,7 +5438,7 @@
       "street": "Гагарина",
       "building": "62б",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9079343,
       "longitude": 33.4175457
@@ -5449,7 +5449,7 @@
       "street": "Металлургов",
       "building": "28а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9010406,
       "longitude": 33.3940516
@@ -5460,7 +5460,7 @@
       "street": "проспект Металургів",
       "building": "42",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9092552,
       "longitude": 33.3926895
@@ -5471,7 +5471,7 @@
       "street": "Університетський проспект",
       "building": "3",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50027",
       "latitude": 47.9105526,
       "longitude": 33.3930735
@@ -5482,7 +5482,7 @@
       "street": "вулиця Лісового",
       "building": "13А",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9494524,
       "longitude": 33.4517491
@@ -5493,7 +5493,7 @@
       "street": "Гірницький мікрорайон",
       "building": "1",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.964513,
       "longitude": 33.4572873
@@ -5504,7 +5504,7 @@
       "street": "Свято-Миколаївська вулиця",
       "building": "54",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9014157,
       "longitude": 33.33974
@@ -5515,7 +5515,7 @@
       "street": "проспект Перемоги",
       "building": "35",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50102",
       "latitude": 47.6823329,
       "longitude": 33.1591618
@@ -5526,7 +5526,7 @@
       "street": "вулиця Мартіна Шимановського",
       "building": "5",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50000",
       "latitude": 47.895589,
       "longitude": 33.3375443
@@ -5537,7 +5537,7 @@
       "street": "Свято-Миколаївська вулиця",
       "building": "44/13",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50000",
       "latitude": 47.9017481,
       "longitude": 33.338388
@@ -5548,7 +5548,7 @@
       "street": "Haharina Ave",
       "building": "54",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50086",
       "latitude": 47.9082494,
       "longitude": 33.4094803
@@ -5559,7 +5559,7 @@
       "street": "Паровозна вулиця",
       "building": "26а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9157017,
       "longitude": 33.445089
@@ -5570,7 +5570,7 @@
       "street": "вулиця Петра Дорошенка",
       "building": "15",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9012108,
       "longitude": 33.4192944
@@ -5581,7 +5581,7 @@
       "street": "вулиця Симона Петлюри",
       "building": "1",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0426132,
       "longitude": 33.4811273
@@ -5592,7 +5592,7 @@
       "street": "вулиця Романа Шухевича",
       "building": "21",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0374296,
       "longitude": 33.4803516
@@ -5603,7 +5603,7 @@
       "street": "вулиця Володимира Терещенка",
       "building": "1е",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.1453161,
       "longitude": 33.5620301
@@ -5614,7 +5614,7 @@
       "street": "вулиця Володимира Терещенка",
       "building": "1е",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.14534,
       "longitude": 33.5617036
@@ -5625,7 +5625,7 @@
       "street": "вулиця Володимира Терещенка",
       "building": "1к",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.1454388,
       "longitude": 33.561401
@@ -5636,7 +5636,7 @@
       "street": "вулиця Володимира Терещенка",
       "building": "1-У",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.144778,
       "longitude": 33.5626316
@@ -5647,7 +5647,7 @@
       "street": "Вечірньокутська вулиця",
       "building": "5А",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": "50050",
       "latitude": 47.9236286,
       "longitude": 33.4481362
@@ -5658,7 +5658,7 @@
       "street": "вулиця Петра Дорошенка",
       "building": "5а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9018121,
       "longitude": 33.419996
@@ -5669,7 +5669,7 @@
       "street": "проспект Перемоги",
       "building": "13",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.6835941,
       "longitude": 33.1653723
@@ -5680,7 +5680,7 @@
       "street": "вулиця Олександра Поля",
       "building": "1",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9037048,
       "longitude": 33.3410436
@@ -5691,7 +5691,7 @@
       "street": "Чарівна вулиця",
       "building": "1",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0740252,
       "longitude": 33.5163206
@@ -5702,7 +5702,7 @@
       "street": "вулиця Корнія Речмидила",
       "building": "36",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0149948,
       "longitude": 33.4629089
@@ -5713,7 +5713,7 @@
       "street": "вулиця Олексія Різниченка",
       "building": "5а",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9707766,
       "longitude": 33.4426801
@@ -5724,7 +5724,7 @@
       "street": "вулиця Джона Маккейна",
       "building": "5",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.030978,
       "longitude": 33.480734
@@ -5735,7 +5735,7 @@
       "street": "вулиця Джона Маккейна",
       "building": "2",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0290515,
       "longitude": 33.4796658
@@ -5746,7 +5746,7 @@
       "street": "вулиця Джона Маккейна",
       "building": "9",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0322121,
       "longitude": 33.4816442
@@ -5757,7 +5757,7 @@
       "street": "вулиця Федора Караманиць",
       "building": "26",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0220361,
       "longitude": 33.4714254
@@ -5768,7 +5768,7 @@
       "street": "вулиця Миколи Світальського",
       "building": "15",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9721121,
       "longitude": 33.4449721
@@ -5779,7 +5779,7 @@
       "street": "вулиця Миколи Світальського",
       "building": "15",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.972109,
       "longitude": 33.4454315
@@ -5790,7 +5790,7 @@
       "street": "вулиця Івана Авраменка",
       "building": "3-Г",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9383802,
       "longitude": 33.4264666
@@ -5801,7 +5801,7 @@
       "street": "4-й Зарічний мікрорайон",
       "building": "21-Ж",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9996161,
       "longitude": 33.480564
@@ -5812,7 +5812,7 @@
       "street": "проспект 200-річчя Кривого Рогу",
       "building": "14-А",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9652475,
       "longitude": 33.4356934
@@ -5823,7 +5823,7 @@
       "street": "вулиця Романа Шухевича",
       "building": "2",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0303296,
       "longitude": 33.475602
@@ -5834,7 +5834,7 @@
       "street": "вулиця Олексія Різниченка",
       "building": "5-А",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9708685,
       "longitude": 33.4423667
@@ -5845,7 +5845,7 @@
       "street": "проспект Перемоги",
       "building": "35",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.6822994,
       "longitude": 33.1591523
@@ -5856,7 +5856,7 @@
       "street": "вулиця Федора Караманиць",
       "building": "66-А",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.0103655,
       "longitude": 33.4809208
@@ -5867,7 +5867,7 @@
       "street": "вулиця Соборності",
       "building": "8",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.8993784,
       "longitude": 33.3963802
@@ -5878,7 +5878,7 @@
       "street": "вулиця Гірничих Інженерів",
       "building": "10",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9081836,
       "longitude": 33.3489829
@@ -5889,7 +5889,7 @@
       "street": "Алмазна вулиця",
       "building": "18",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.897296,
       "longitude": 33.2937053
@@ -5900,7 +5900,7 @@
       "street": "4-й Зарічний мікрорайон",
       "building": "21-К",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9995479,
       "longitude": 33.4781259
@@ -5911,7 +5911,7 @@
       "street": "вулиця Лісового",
       "building": "34-А",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.951521,
       "longitude": 33.4572369
@@ -5922,7 +5922,7 @@
       "street": "вулиця Героїв Маріуполя",
       "building": "44-А",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 48.1429167,
       "longitude": 33.5891533
@@ -5933,7 +5933,7 @@
       "street": "вулиця Івана Авраменка",
       "building": "21",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9372787,
       "longitude": 33.427062
@@ -5944,13 +5944,13 @@
       "street": "вулиця Володимира Великого",
       "building": "36-Б",
       "city": "Кривий Ріг",
-      "region": null,
+      "region": "Дніпропетровська",
       "post_code": null,
       "latitude": 47.9447193,
       "longitude": 33.4254152
     }
   ],
-  "ORGANIZATION_CATIGORIES": [
+  "ORGANIZATION_CATEGORIES": [
     {
       "org_id": 1,
       "category_id": 1
