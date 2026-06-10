@@ -286,7 +286,7 @@ INSERT INTO locations (
     street,
     city,
     region,
-    zip_code,
+    post_code,
     latitude,
     longitude
 )
