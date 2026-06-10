@@ -38,9 +38,8 @@ export const createOrganizationValidation = [
     .isInt({ min: 1 })
     .withMessage("Each category ID must be a positive integer"),
 
-  // TODO
   body("locations")
-    .optional() // ????????
+    .optional()
     .isArray({ min: 1 })
     .withMessage("Locations must be an array with at least one item"),
 
@@ -57,10 +56,10 @@ export const createOrganizationValidation = [
     .trim()
     .notEmpty()
     .withMessage("Region is required for each location"),
-  body("locations.*.zipCode")
+  body("locations.*.postCode")
     .trim()
     .notEmpty()
-    .withMessage("Zip code is required for each location")
+    .withMessage("Post code is required for each location")
     .isLength({ min: 5, max: 5 }),
   body("locations.*.latitude")
     .trim()
