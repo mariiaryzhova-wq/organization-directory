@@ -5,6 +5,7 @@ import fs from 'fs';
   тому city не беремо з файлу, а хардкодимо.
 */
 const CITY = 'Кривий Ріг';
+const REGION = 'Дніпропетровська';
 
 /*
   У GeoJSON категорія організації може бути записана в різних полях.
@@ -397,7 +398,7 @@ const mergeOrganizationData = (organization, properties) => {
   - CATEGORIES
   - ORGANIZATIONS
   - LOCATIONS
-  - ORGANIZATION_CATIGORIES
+  - ORGANIZATION_CATEGORIES
 */
 const parseGeoJson = (filePath) => {
     const fileContent = fs.readFileSync(filePath, 'utf-8');
@@ -510,7 +511,7 @@ const parseGeoJson = (filePath) => {
 
         /*
           Якщо бізнес-категорія визначена, додаємо її в CATEGORIES
-          і створюємо зв'язок ORGANIZATION_CATIGORIES.
+          і створюємо зв'язок ORGANIZATION_CATEGORIES.
         */
         if (businessCategoryName !== null) {
             let category = categoriesMap.get(businessCategoryName);
@@ -563,7 +564,8 @@ const parseGeoJson = (filePath) => {
             street: properties['addr:street'] ?? null,
             building: properties['addr:housenumber'] ?? null,
             city: CITY,
-            region: properties['addr:region'] ?? null,
+            region: REGION,
+            // region: properties['addr:region'] ?? null,
             post_code: properties['addr:postcode'] ?? null,
             latitude,
             longitude
@@ -578,7 +580,7 @@ const parseGeoJson = (filePath) => {
         CATEGORIES: categories,
         ORGANIZATIONS: organizations,
         LOCATIONS: locations,
-        ORGANIZATION_CATIGORIES: organizationCategories
+        ORGANIZATION_CATEGORIES: organizationCategories
     };
 };
 
