@@ -57,7 +57,7 @@ export async function assignCategoryToOrganization(orgId, categoryId) {
 }
 
 // Пошук організацій за query parameters
-export async function findOrganizations(filters, pagination){
+export async function findOrganizations(filters, pagination) {
     try {
         const { categoryId, status, geoParams } = filters ?? {};
 
