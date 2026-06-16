@@ -11,7 +11,8 @@
     "prisma:migrate": "npx prisma migrate dev",
     "prisma:generate": "npx prisma generate",
     "prisma:studio": "npx prisma studio",
-    "db:seed": "node src/db/seed.js"
+    "db:seed": "node src/db/seed.js",
+   "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "keywords": [],
   "author": "",
@@ -31,6 +32,7 @@
     "tsx": "^4.22.1"
   },
   "devDependencies": {
+    "jest": "^30.4.2",
     "prisma": "^7.8.0"
   }
 }
