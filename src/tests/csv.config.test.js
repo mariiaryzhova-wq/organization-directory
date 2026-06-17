@@ -4,3 +4,6 @@ export const MAX_ROWS = 500; // в одному імпорті
 // визначаємо структуру документу
 export const REQUIRED_COLUMNS = ["name"];
 export const OPTIONAL_COLUMNS = ["description", "website_url"];
+test('Мой одиннадцатый проверочный тест', () => {
+  expect(1 + 1).toBe(2);
+});
